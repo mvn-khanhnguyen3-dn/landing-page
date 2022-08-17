@@ -1,0 +1,62 @@
+.bg-hover {
+  &:hover {
+    background: map-get($colors, bg-primary) !important;
+    border-bottom: 1px solid map-get($colors, bg-primary) !important;
+    color: map-get($colors, white) !important;
+    transition: 0.1s ease-in-out;
+  }
+}
+
+.cls-hover {
+  &:hover,
+  &:hover .drop-down-title {
+    color: map-get($colors, bg-primary) !important;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.section-padding {
+  padding-top: convertPxToRem(110px);
+  padding-bottom: convertPxToRem(95px);
+}
+
+.title {
+  color: map-get($colors, primary);
+  font-family: $font-menu;
+  font-size: convertPxToRem(36px);
+  font-weight: 500;
+  line-height: 1.4;
+  position: relative;
+  width: fit-content;
+  z-index: 10;
+  padding-left: convertPxToRem(12px);
+}
+
+.shape {
+  position: absolute;
+  width: 72px;
+  height: 50px;
+  background: map-get($colors, cls-section);
+  z-index: -1;
+  left: 0;
+  top: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.items-list {
+  @include pxRem(margin-top, 68);
+  @include pxRem(margin-bottom, 27);
+  display: flex;
+  flex-wrap: wrap;
+  @include pxRem(padding, 0 32);
+  gap: 1.5rem;
+}
+
+.title-center {
+  margin: 0 auto;
+}
+
+.position-relative {
+  position: relative;
+}

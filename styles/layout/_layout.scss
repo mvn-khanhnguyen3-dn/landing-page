@@ -1,0 +1,106 @@
+.cursorInter,
+.cursorOuter {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  display: none;
+  z-index: 99999;
+}
+
+.cursorOuter {
+  transition: all 0.08s ease-out;
+  height: convertPxToRem(30px);
+  width: convertPxToRem(30px);
+  border: 2px solid #f76631;
+  opacity: 0.5;
+  margin-left: convertPxToRem(-12px);
+  margin-top: convertPxToRem(-11px);
+}
+
+.cursorInter {
+  width: convertPxToRem(6px);
+  height: convertPxToRem(6px);
+  background: #f76631;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+// .page-header:hover ~ .cursor {
+//   transform: scale(2.2);
+//   opacity: 0.1;
+//   background: map-get($colors, bg-primary);
+//   transition: all 0.3s;
+// }
+
+a:hover ~ .cursor {
+  transform: scale(2.2);
+  opacity: 0.1;
+  background: map-get($colors, bg-primary);
+  transition: all 0.3s;
+}
+
+h1:hover ~ .cursor {
+  transform: scale(2.2) !important;
+  opacity: 0.1;
+  background: map-get($colors, bg-primary) !important;
+  transition: all 0.3s;
+}
+
+.drop-scroll::-webkit-scrollbar {
+  width: convertPxToRem(3px);
+  border-radius: convertPxToRem(10px);
+}
+
+.drop-scroll::-webkit-scrollbar-thumb {
+  border-radius: convertPxToRem(10px);
+  background-color: map-get($colors, bg-primary);
+}
+
+.col-padding {
+  @include pxRem(padding, 0 20);
+}
+.footer-title {
+  font-size: convertPxToRem(20px);
+  margin-bottom: convertPxToRem(34px);
+  font-weight: 500;
+  color: map-get($colors, white);
+}
+.footer-col-middle {
+  .listsing-item {
+    @include pxRem(margin-bottom, 11);
+    &:last-child {
+      @include pxRem(margin-bottom, 0);
+    }
+    .single-item {
+      font-size: convertPxToRem(16px);
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+.progress {
+  position: fixed;
+  right: convertPxToRem(30px);
+  bottom: convertPxToRem(30px);
+  height: convertPxToRem(46px);
+  width: convertPxToRem(46px);
+  cursor: pointer;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+  transform: translateY(15px);
+  transition: all 200ms linear;
+  .progress-icon {
+    color: map-get($colors, bg-primary);
+    background: map-get($colors, white);
+    border-radius: 50%;
+    @include pxRem(padding, 12);
+    width: 90%;
+    height: 90%;
+  }
+}

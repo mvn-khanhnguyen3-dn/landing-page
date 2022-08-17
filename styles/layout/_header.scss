@@ -1,0 +1,133 @@
+.page-header {
+  @include pxRem(padding, 23 0);
+  background: map-get($colors, black);
+  color: map-get($colors, white);
+  text-transform: capitalize;
+  .header-category-list {
+    position: relative;
+    cursor: pointer;
+    line-height: 1.2;
+    color: #344054;
+    z-index: 9999;
+    background: map-get($colors, white);
+    border: 1px solid map-get($colors, bg-category);
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+    border-radius: convertPxToRem(8px);
+    font-size: convertPxToRem(16px);
+    &:hover {
+      border: 1px solid transparent !important;
+    }
+    .btn-allCategory {
+      align-items: center;
+      @include pxRem(padding, 0 33);
+      line-height: convertPxToRem(50px);
+      font-family: $font-menu;
+      .icon-category {
+        font-size: convertPxToRem(20px);
+      }
+    }
+    .category-item {
+      @include pxRem(padding-left, 10);
+      @include pxRem(padding-right, 20);
+      font-weight: 400;
+      color: #344054;
+      font-size: convertPxToRem(16px);
+    }
+  }
+  .header-nav-list {
+    font-size: convertPxToRem(16px);
+    line-height: convertPxToRem(70px);
+    align-items: center;
+    .header-nav-item {
+      color: map-get($colors, white);
+      @include pxRem(padding, 0 22);
+      font-weight: 300;
+      line-height: inherit;
+      color: #fff;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+    .header-nav-page {
+      position: relative;
+      gap: 0.3rem;
+      align-items: inherit;
+      &:hover .is-hidden {
+        display: block;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+  .header-socials-list {
+    align-items: center;
+    gap: convertPxToRem(20px);
+  }
+  .header-socials-item {
+    position: relative;
+    padding-top: convertPxToRem(1px);
+    margin-bottom: convertPxToRem(9px);
+    .btn-socials {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.3);
+      font-family: $font-menu;
+    }
+    .btn-chat {
+      border-radius: convertPxToRem(30px);
+      gap: 0.3rem;
+      @include pxRem(padding, 22 15);
+      .btn-chat-icon {
+        font-size: convertPxToRem(22px);
+      }
+    }
+    .btn-user,
+    .btn-heart {
+      width: convertPxToRem(48px);
+      height: convertPxToRem(48px);
+      line-height: convertPxToRem(48px);
+      font-size: convertPxToRem(20px);
+      padding: 0;
+    }
+    .btn-plus {
+      background: map-get($colors, bg-primary);
+      border-radius: convertPxToRem(8px);
+      @include pxRem(padding, 0 10);
+      border: 1px solid transparent;
+      &:hover {
+        background: 0 0;
+        border: 1px solid map-get($colors, bg-primary);
+        color: map-get($colors, bg-primary);
+        transition: 0.4s ease-in-out;
+      }
+      .btn-icon-plus {
+        border: 1px solid #fff;
+        @include pxRem(padding, 1);
+        font-size: convertPxToRem(20px);
+        &:hover {
+          border: 1px solid map-get($colors, bg-primary);
+          transition: 0.1s ease-in-out;
+        }
+      }
+    }
+    .drop-down-title {
+      font-size: convertPxToRem(17px);
+      border-bottom: 1px solid rgba(221, 221, 221, 0.3);
+      @include pxRem(padding, 20 15 10);
+      color: map-get($colors, cls-black);
+      @include pxRem(border-radius, 8 8 0 0);
+      background: #fff;
+    }
+    .chat-all {
+      font-size: convertPxToRem(15px);
+      color: map-get($colors, primary);
+      font-weight: 300;
+      @include pxRem(border-radius, 0 0 8 8);
+      @include pxRem(padding, 20 15);
+    }
+  }
+  .change-language {
+    gap: 0.3rem;
+    color: map-get($colors, white);
+    align-items: center;
+    font-weight: 300;
+  }
+}

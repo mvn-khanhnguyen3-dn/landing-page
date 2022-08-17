@@ -1,0 +1,30 @@
+.single-menu {
+  font-weight: 500;
+  min-width: convertPxToRem(125px);
+  .single-menu-list {
+    padding-left: convertPxToRem(10px);
+    .single-menu-item {
+      font-size: convertPxToRem(16px);
+      margin-bottom: convertPxToRem(10px);
+    }
+  }
+}
+.single-title {
+  padding-bottom: convertPxToRem(20px);
+  font-size: convertPxToRem(19px);
+  color: map-get($colors, primary);
+}
+.single-product {
+  @include pxRem(padding, 0 5);
+  .single-product-title {
+    padding-top: convertPxToRem(20px);
+    padding-bottom: convertPxToRem(8px);
+  }
+  .single-product-desc {
+    align-items: center;
+    justify-content: space-between;
+    .old-price {
+      text-decoration: line-through;
+    }
+  }
+}

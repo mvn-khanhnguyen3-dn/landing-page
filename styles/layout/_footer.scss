@@ -1,0 +1,84 @@
+.page-footer {
+  @include pxRem(padding-top, 100);
+  background: map-get($colors, bg-section-hero);
+  .footer-logo {
+    @include pxRem(margin-bottom, 40);
+  }
+  .col-1-item {
+    @include pxRem(margin-bottom, 25);
+    .col-icon-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: convertPxToRem(16px);
+      align-items: center;
+    }
+    .col-1-icon {
+      color: map-get($colors, white);
+      background: rgba(255, 255, 255, 0.3);
+      margin-right: convertPxToRem(7px);
+      width: convertPxToRem(40px);
+      height: convertPxToRem(40px);
+      line-height: convertPxToRem(40px);
+      border-radius: 50%;
+      transition: 0.4s;
+      padding: convertPxToRem(12px);
+    }
+  }
+  .footer-col-3 {
+    width: 26%;
+    .col-3-desc {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: convertPxToRem(16px);
+      line-height: 1.8;
+      margin-bottom: convertPxToRem(28px);
+    }
+    .col-3-input {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: 0 0;
+      color: rgba(255, 255, 255, 0.7);
+      border-radius: convertPxToRem(8px);
+      width: 100%;
+      height: convertPxToRem(52px);
+      @include pxRem(padding, 10 20);
+      padding-right: convertPxToRem(101px);
+    }
+    .col-3-btn {
+      position: absolute;
+      top: convertPxToRem(5px);
+      right: convertPxToRem(5px);
+      height: convertPxToRem(42px);
+      border-radius: convertPxToRem(8px);
+      cursor: pointer;
+      @include pxRem(padding, 10 20);
+      font-size: convertPxToRem(16px);
+      background: map-get($colors, bg-primary);
+      color: #fff;
+      font-weight: 600;
+      line-height: 1;
+      border: 0;
+    }
+    .footer-socials {
+      @include pxRem(padding-top, 20);
+      color: rgba(255, 255, 255, 0.7);
+      gap: 1rem;
+    }
+    .socials-item {
+      font-size: convertPxToRem(18px);
+      text-align: center;
+    }
+  }
+  .footer-copy-right {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    @include pxRem(margin-top, 75);
+    @include pxRem(margin-left, 20);
+    @include pxRem(margin-right, 20);
+    @include pxRem(padding, 30 0);
+    text-align: center;
+    .copy-right-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 2;
+      margin: 0;
+    }
+  }
+}
