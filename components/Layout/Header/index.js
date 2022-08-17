@@ -79,7 +79,7 @@ const Header = () => {
           >
             <button className="btn btn-socials btn-chat bg-hover flex">
               <SiRocketdotchat className="btn-chat-icon" />
-              Chat
+              <span className="chat-name">Chat</span>
             </button>
 
             <div

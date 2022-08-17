@@ -452,3 +452,37 @@
     }
   }
 }
+
+@include respond-below(largest) {
+  .page-header {
+    .header-nav-list {
+      .header-nav-item {
+        @include pxRem(padding, 7);
+      }
+    }
+    .header-socials-item {
+      .btn-chat {
+        @include pxRem(padding, 6 7);
+        .chat-name {
+          display: none;
+        }
+      }
+      .btn-heart,
+      .btn-user,
+      .btn-chat {
+        width: convertPxToRem(30px);
+        height: convertPxToRem(30px);
+        line-height: convertPxToRem(30px);
+        font-size: convertPxToRem(15px);
+      }
+    }
+  }
+}
+@include respond-below(large) {
+}
+@include respond-below(wide) {
+}
+@include respond-below(medium) {
+}
+@include respond-below(small) {
+}
