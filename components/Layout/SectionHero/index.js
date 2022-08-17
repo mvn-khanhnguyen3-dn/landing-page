@@ -46,21 +46,23 @@ const SectionHero = () => {
                 <GoLocation /> <span className="current">New Youk, USA</span>
                 <BsChevronDown />
               </div>
-              <ul
+              <div
+                className="select-form-list"
                 style={{
                   transform: isShow ? "scaleY(1)" : "scaleY(0)",
                 }}
-                className="select-form-list"
               >
                 <input
                   className="search-sub-form"
                   type="text"
                   placeholder="Search..."
                 />
-                <li className="form-item focus">New Youk, USA</li>
-                <li className="form-item">Location PK</li>
-                <li className="form-item">Location US</li>
-              </ul>
+                <ul className="form-list">
+                  <li className="form-item focus">New Youk, USA</li>
+                  <li className="form-item">Location PK</li>
+                  <li className="form-item">Location US</li>
+                </ul>
+              </div>
             </div>
             <input
               className="searchBox-wrapper"

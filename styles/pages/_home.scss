@@ -216,6 +216,9 @@
       }
       .feature-item-content {
         background: #fff;
+        // flex: 1;
+        // display: flex;
+        // flex-direction: column;
         @include pxRem(padding, 18 31 25 25);
         margin-top: convertPxToRem(-37px);
         border-radius: convertPxToRem(20px);
@@ -224,6 +227,7 @@
       }
       .feature-item-title {
         line-height: 1.5;
+        // flex: 1;
         font-weight: 500;
         font-size: convertPxToRem(22px);
         color: map-get($colors, primary);
@@ -456,9 +460,15 @@
 @include respond-below(largest) {
   .page-header {
     .header-nav-list {
+      margin-left: -5%;
+      line-height: 50px;
       .header-nav-item {
-        @include pxRem(padding, 7);
+        @include pxRem(padding, 10);
+        font-size: 15px;
       }
+    }
+    .header-socials-list {
+      gap: convertPxToRem(5px);
     }
     .header-socials-item {
       .btn-chat {
@@ -469,11 +479,33 @@
       }
       .btn-heart,
       .btn-user,
-      .btn-chat {
+      .btn-chat,
+      .btn-plus {
         width: convertPxToRem(30px);
+        @include pxRem(padding, 5);
         height: convertPxToRem(30px);
         line-height: convertPxToRem(30px);
         font-size: convertPxToRem(15px);
+        .btn-icon-plus,
+        .btn-chat-icon {
+          @include pxRem(padding, 0);
+          font-size: convertPxToRem(15px);
+        }
+      }
+    }
+  }
+  .page-main {
+    .section-hero {
+      .heroLeft {
+        width: calc(70%);
+      }
+    }
+    .section-feature {
+      .section-feature-list {
+        justify-content: flex-start;
+        .feature-item {
+          width: calc(100% / 4 - 1.15rem);
+        }
       }
     }
   }

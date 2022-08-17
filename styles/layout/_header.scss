@@ -19,7 +19,7 @@
     }
     .btn-allCategory {
       align-items: center;
-      @include pxRem(padding, 0 33);
+      @include pxRem(padding, 0 32);
       line-height: convertPxToRem(50px);
       font-family: $font-menu;
       .icon-category {
@@ -90,7 +90,7 @@
     .btn-plus {
       background: map-get($colors, bg-primary);
       border-radius: convertPxToRem(8px);
-      @include pxRem(padding, 0 10);
+      @include pxRem(padding, 0 8);
       border: 1px solid transparent;
       &:hover {
         background: 0 0;
@@ -99,9 +99,7 @@
         transition: 0.4s ease-in-out;
       }
       .btn-icon-plus {
-        border: 1px solid #fff;
-        @include pxRem(padding, 1);
-        font-size: convertPxToRem(20px);
+        font-size: convertPxToRem(25px);
         &:hover {
           border: 1px solid map-get($colors, bg-primary);
           transition: 0.1s ease-in-out;

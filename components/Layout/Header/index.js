@@ -9,7 +9,7 @@ import { VscThreeBars } from "react-icons/vsc";
 import { BsChevronDown, BsHeart } from "react-icons/bs";
 import { SiRocketdotchat } from "react-icons/si";
 import { RiUserLine } from "react-icons/ri";
-import { AiOutlinePlus, AiFillCaretDown } from "react-icons/ai";
+import { AiOutlinePlusSquare, AiFillCaretDown } from "react-icons/ai";
 import DropDownPage from "../../modules/DropDownPage";
 import NavLink from "../../modules/NavLink";
 
@@ -125,7 +125,7 @@ const Header = () => {
           </li>
           <li className="header-socials-item">
             <button className="btn btn-socials btn-plus">
-              <AiOutlinePlus className="btn-icon-plus" />
+              <AiOutlinePlusSquare className="btn-icon-plus" />
             </button>
           </li>
           <li className="header-socials-item change-language flex">
