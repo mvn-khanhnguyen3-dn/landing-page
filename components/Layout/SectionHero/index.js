@@ -81,7 +81,6 @@ const SectionHero = () => {
               objectFit="cover"
               objectPosition="center"
               alt="heroRight-image"
-              priority
             />
           </div>
           <div className="heroRight-sub-image">

@@ -22,13 +22,7 @@ const Header = () => {
     <header className="page-header">
       <div className="container flex align-items-center justify-content-between">
         <div className="header-logo">
-          <Image
-            src="/images/2.png"
-            alt="logo"
-            width={225}
-            height={50}
-            priority
-          />
+          <Image src="/images/2.png" alt="logo" width={225} height={50} />
         </div>
         <div className="header-category-list bg-hover ">
           <div
