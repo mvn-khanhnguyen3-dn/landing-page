@@ -32,7 +32,7 @@ const Header = () => {
     <header className="page-header">
       <div className="container flex align-items-center justify-content-between">
         <div className="header-logo logo position-relative">
-          <Image src="/images/2.png" alt="logo" priority={true} layout="fill" />
+          <Image src="/images/2.png" alt="logo" layout="fill" />
         </div>
         <div className="header-category-list bg-hover ">
           <div

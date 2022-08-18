@@ -67,7 +67,6 @@ const SectionHero = () => {
               height={523}
               objectPosition="center"
               alt="heroRight-image"
-              priority={true}
             />
           </div>
           <div className="heroRight-sub-image position-relative">
