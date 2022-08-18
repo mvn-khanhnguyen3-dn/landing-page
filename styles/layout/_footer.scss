@@ -1,8 +1,32 @@
 .page-footer {
   @include pxRem(padding-top, 100);
+  @include pxRem(padding-left, 10);
+  @include pxRem(padding-right, 10);
   background: map-get($colors, bg-section-hero);
+  .footer-container {
+    @include pxRem(padding-bottom, 25);
+    .footer-title {
+      font-size: convertPxToRem(20px);
+      margin-bottom: convertPxToRem(34px);
+      font-weight: 400;
+      color: map-get($colors, white);
+    }
+    .footer-col-middle {
+      .listsing-item {
+        @include pxRem(margin-bottom, 11);
+        &:last-child {
+          @include pxRem(margin-bottom, 0);
+        }
+        .single-item {
+          font-size: convertPxToRem(16px);
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
   .footer-logo {
     @include pxRem(margin-bottom, 40);
+    @include pxRem(padding, 0 12);
   }
   .col-1-item {
     @include pxRem(margin-bottom, 25);

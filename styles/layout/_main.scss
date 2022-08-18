@@ -5,6 +5,9 @@
     color: map-get($colors, white) !important;
     transition: 0.1s ease-in-out;
   }
+  &:hover .category-item {
+    color: map-get($colors, white) !important;
+  }
 }
 
 .cls-hover {
@@ -55,6 +58,7 @@
 
 .title-center {
   margin: 0 auto;
+  text-align: center;
 }
 
 .position-relative {

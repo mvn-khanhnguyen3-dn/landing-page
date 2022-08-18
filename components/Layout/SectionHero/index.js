@@ -73,23 +73,25 @@ const SectionHero = () => {
           </form>
         </div>
         <div className="heroRight">
-          <div ref={imageRef} className="heroRight-image">
+          <div ref={imageRef} className="heroRight-image position-relative">
             <Image
-              width={540}
-              height={520}
               src="/images/hero-man3.png"
               objectFit="cover"
+              width={542}
+              height={523}
               objectPosition="center"
               alt="heroRight-image"
             />
           </div>
-          <div className="heroRight-sub-image">
+          <div className="heroRight-sub-image position-relative">
             <Image
               className="heartbeat"
+              objectFit="cover"
+              objectPosition="center"
               src="/images/heroShape6.png"
-              width={127}
-              height={126}
               alt="heartbeat"
+              width={126}
+              height={126}
             />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import DropDownCategory from "../../modules/DropDownCategory";
@@ -9,20 +9,22 @@ import { VscThreeBars } from "react-icons/vsc";
 import { BsChevronDown, BsHeart } from "react-icons/bs";
 import { SiRocketdotchat } from "react-icons/si";
 import { RiUserLine } from "react-icons/ri";
+import { FaEllipsisV } from "react-icons/fa";
 import { AiOutlinePlusSquare, AiFillCaretDown } from "react-icons/ai";
 import DropDownPage from "../../modules/DropDownPage";
-import NavLink from "../../modules/NavLink";
 
 const Header = () => {
   const [isshowCategory, setIsShowCategory] = useState(false);
   const [isshowChat, setIsShowChat] = useState(false);
   const [isshowUser, setIsShowUser] = useState(false);
+  const [isshowMenu, setIsShowMenu] = useState(false);
+  const [isshowSocials, setIsShowSocials] = useState(false);
 
   return (
     <header className="page-header">
       <div className="container flex align-items-center justify-content-between">
-        <div className="header-logo">
-          <Image src="/images/2.png" alt="logo" width={225} height={50} />
+        <div className="header-logo logo position-relative">
+          <Image src="/images/2.png" alt="logo" layout="fill" />
         </div>
         <div className="header-category-list bg-hover ">
           <div
@@ -44,7 +46,25 @@ const Header = () => {
             ))}
           </ul>
         </div>
-        <nav className="header-nav-list flex">
+        <div className="btn-toggle-wrapper is-hidden">
+          <FaEllipsisV
+            onClick={() => setIsShowSocials(!isshowSocials)}
+            className="icon-show"
+          />
+          <a
+            onClick={() => setIsShowMenu(!isshowMenu)}
+            className="btn-show-menu"
+          >
+            <span className="btn-bar"></span>
+          </a>
+        </div>
+        <nav
+          style={{
+            maxHeight: isshowMenu ? "100vh" : "0",
+            opacity: isshowMenu && "1",
+          }}
+          className="header-nav-list flex"
+        >
           <Link href="/">
             <a className="header-nav-item cls-hover">All Ads</a>
           </Link>
@@ -61,12 +81,17 @@ const Header = () => {
               </ul>
             </a>
           </Link>
-
           <Link href="/">
             <a className="header-nav-item cls-hover">Contact</a>
           </Link>
         </nav>
-        <ul className="header-socials-list flex">
+        <ul
+          style={{
+            maxHeight: isshowSocials ? "100vh" : "0",
+            opacity: isshowSocials && "1",
+          }}
+          className="header-socials-list flex"
+        >
           <li
             onClick={() => setIsShowChat(!isshowChat)}
             className="header-socials-item"

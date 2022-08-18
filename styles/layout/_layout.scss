@@ -27,12 +27,12 @@
     margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-// .page-header:hover ~ .cursor {
-//   transform: scale(2.2);
-//   opacity: 0.1;
-//   background: map-get($colors, bg-primary);
-//   transition: all 0.3s;
-// }
+.page-header:hover ~ .cursor {
+  transform: scale(2.2);
+  opacity: 0.1;
+  background: map-get($colors, bg-primary);
+  transition: all 0.3s;
+}
 
 a:hover ~ .cursor {
   transform: scale(2.2);
@@ -60,23 +60,8 @@ h1:hover ~ .cursor {
 
 .col-padding {
   @include pxRem(padding, 0 20);
-}
-.footer-title {
-  font-size: convertPxToRem(20px);
-  margin-bottom: convertPxToRem(34px);
-  font-weight: 500;
-  color: map-get($colors, white);
-}
-.footer-col-middle {
-  .listsing-item {
-    @include pxRem(margin-bottom, 11);
-    &:last-child {
-      @include pxRem(margin-bottom, 0);
-    }
-    .single-item {
-      font-size: convertPxToRem(16px);
-      color: rgba(255, 255, 255, 0.7);
-    }
+  &:first-child {
+    @include pxRem(padding-left, 0);
   }
 }
 
@@ -103,4 +88,8 @@ h1:hover ~ .cursor {
     width: 90%;
     height: 90%;
   }
+}
+.logo {
+  width: convertPxToRem(225px);
+  height: convertPxToRem(50px);
 }

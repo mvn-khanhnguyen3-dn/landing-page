@@ -14,8 +14,13 @@ const Footer = () => {
       <div className="container">
         <div className="footer-container flex justify-content-between">
           <div className="footer-col-1 col-padding">
-            <div className="footer-logo">
-              <Image src="/images/2.png" width={225} height={50} alt="logo" />
+            <div className="footer-logo logo position-relative">
+              <Image
+                src="/images/2.png"
+                layout="fill"
+                objectFit="contain"
+                alt="logo"
+              />
             </div>
             <ul className="col-1-list listsing">
               <li className="col-1-item">

@@ -5,13 +5,15 @@ const FeatureItem = (props) => {
   const { image, title, desc, time, price, btnGroup } = props;
   return (
     <li className="feature-item">
-      <Image
-        className="feature-item-image"
-        src={image}
-        width={306}
-        height={250}
-        alt=""
-      />
+      <div className="feature-item-image position-relative">
+        <Image
+          src={image}
+          layout="fill"
+          alt={title}
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
       <div className="feature-item-content">
         <h4 className="feature-item-title">{title}</h4>
         <p className="feature-item-cap">
