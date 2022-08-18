@@ -12,10 +12,12 @@ $font-weight: (
 // == Breakpoints === //
 $breakpoints: (
   small: 480px,
+  smaller: 580px,
   medium: 768px,
   wide: 960px,
   large: 1024px,
-  largest: 1280px,
+  larger: 1280px,
+  largest: 1400px,
 );
 
 // === Colors === //

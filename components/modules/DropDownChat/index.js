@@ -4,12 +4,13 @@ import React from "react";
 const DropDownChat = (props) => {
   const { avatar, userName, timeAgo } = props;
   return (
-    <li className="flex drop-down_item gap-md bg-hover">
+    <li className="flex drop-down_item gap-sm bg-hover">
       <Image
         src={avatar}
-        alt=""
-        width={44}
-        height={44}
+        alt={userName}
+        className="user-image"
+        width={50}
+        height={50}
         quality={100}
         objectFit="cover"
       />

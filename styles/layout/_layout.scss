@@ -34,26 +34,21 @@
   transition: all 0.3s;
 }
 
-a:hover ~ .cursor {
+a:hover .cursor {
   transform: scale(2.2);
   opacity: 0.1;
   background: map-get($colors, bg-primary);
   transition: all 0.3s;
 }
 
-h1:hover ~ .cursor {
-  transform: scale(2.2) !important;
-  opacity: 0.1;
-  background: map-get($colors, bg-primary) !important;
-  transition: all 0.3s;
-}
-
-.drop-scroll::-webkit-scrollbar {
-  width: convertPxToRem(3px);
+.menuWrapper::-webkit-scrollbar,
+.pages-mobile::-webkit-scrollbar {
+  width: convertPxToRem(2px);
   border-radius: convertPxToRem(10px);
 }
 
-.drop-scroll::-webkit-scrollbar-thumb {
+.menuWrapper::-webkit-scrollbar-thumb,
+.pages-mobile::-webkit-scrollbar-thumb {
   border-radius: convertPxToRem(10px);
   background-color: map-get($colors, bg-primary);
 }
@@ -89,7 +84,24 @@ h1:hover ~ .cursor {
     height: 90%;
   }
 }
+
 .logo {
   width: convertPxToRem(225px);
   height: convertPxToRem(50px);
+}
+
+.user-image {
+  @include pxRem(padding, 7 !important);
+}
+
+.show-language {
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+  .form-list {
+    .form-item {
+      font-size: 13px;
+      @include pxRem(padding, 0 5);
+    }
+  }
 }

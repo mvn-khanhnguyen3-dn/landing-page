@@ -107,26 +107,28 @@
       }
     }
     .drop-down-title {
+      font-family: $font-body;
       font-size: convertPxToRem(17px);
       border-bottom: 1px solid rgba(221, 221, 221, 0.3);
       @include pxRem(padding, 20 15 10);
       color: map-get($colors, cls-black);
       @include pxRem(border-radius, 8 8 0 0);
+      font-weight: 600;
       background: #fff;
     }
     .chat-all {
+      font-family: $font-body;
       font-size: convertPxToRem(15px);
       color: map-get($colors, primary);
-      font-weight: 300;
+      font-weight: 400;
       @include pxRem(border-radius, 0 0 8 8);
       @include pxRem(padding, 20 15);
     }
   }
   .change-language {
-    gap: 0.3rem;
     color: map-get($colors, white);
-    align-items: center;
     font-weight: 300;
+    cursor: pointer;
   }
   .btn-toggle-wrapper {
     position: absolute;

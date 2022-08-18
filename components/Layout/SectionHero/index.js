@@ -2,6 +2,8 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { GoLocation } from "react-icons/go";
 import { BsChevronDown } from "react-icons/bs";
+import FormList from "../../modules/FormList";
+import { formData } from "../../../utils/data";
 
 const SectionHero = () => {
   const [isShow, setIsShow] = useState(false);
@@ -46,23 +48,7 @@ const SectionHero = () => {
                 <GoLocation /> <span className="current">New Youk, USA</span>
                 <BsChevronDown />
               </div>
-              <div
-                className="select-form-list"
-                style={{
-                  transform: isShow ? "scaleY(1)" : "scaleY(0)",
-                }}
-              >
-                <input
-                  className="search-sub-form"
-                  type="text"
-                  placeholder="Search..."
-                />
-                <ul className="form-list">
-                  <li className="form-item focus">New Youk, USA</li>
-                  <li className="form-item">Location PK</li>
-                  <li className="form-item">Location US</li>
-                </ul>
-              </div>
+              <FormList formData={formData} isShow={isShow} />
             </div>
             <input
               className="searchBox-wrapper"
@@ -81,6 +67,7 @@ const SectionHero = () => {
               height={523}
               objectPosition="center"
               alt="heroRight-image"
+              priority={true}
             />
           </div>
           <div className="heroRight-sub-image position-relative">

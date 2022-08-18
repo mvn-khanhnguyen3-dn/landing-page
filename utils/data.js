@@ -360,12 +360,6 @@ export const mesengeData = [
     userName: "Suzon islam",
     timeAgo: "3 day ago",
   },
-  {
-    id: 5,
-    avatar: "/images/user.png",
-    userName: "Md Zahid",
-    timeAgo: "7 day ago",
-  },
 ];
 
 export const userData = [
@@ -768,5 +762,35 @@ export const footerData = [
       { id: 2, name: "Faq" },
       { id: 3, name: "Saferty Informations" },
     ],
+  },
+];
+
+export const formData = [
+  {
+    id: 1,
+    item: "New Youk, USA",
+    className: "form-item focus",
+  },
+  {
+    id: 2,
+    item: "Location PK",
+    className: "form-item",
+  },
+  {
+    id: 3,
+    item: "Location US",
+    className: "form-item",
+  },
+];
+export const languageData = [
+  {
+    id: 1,
+    item: "English",
+    className: "form-item focus",
+  },
+  {
+    id: 2,
+    item: "Arabic",
+    className: "form-item",
   },
 ];

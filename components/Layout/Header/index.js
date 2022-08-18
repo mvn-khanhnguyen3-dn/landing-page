@@ -4,7 +4,13 @@ import Link from "next/link";
 import DropDownCategory from "../../modules/DropDownCategory";
 import DropDownChat from "../../modules/DropDownChat";
 import DropDownUser from "../../modules/DropDownUser";
-import { data, mesengeData, userData, pageData } from "../../../utils/data";
+import {
+  data,
+  mesengeData,
+  userData,
+  pageData,
+  languageData,
+} from "../../../utils/data";
 import { VscThreeBars } from "react-icons/vsc";
 import { BsChevronDown, BsHeart } from "react-icons/bs";
 import { SiRocketdotchat } from "react-icons/si";
@@ -12,6 +18,7 @@ import { RiUserLine } from "react-icons/ri";
 import { FaEllipsisV } from "react-icons/fa";
 import { AiOutlinePlusSquare, AiFillCaretDown } from "react-icons/ai";
 import DropDownPage from "../../modules/DropDownPage";
+import FormList from "../../modules/FormList";
 
 const Header = () => {
   const [isshowCategory, setIsShowCategory] = useState(false);
@@ -19,12 +26,13 @@ const Header = () => {
   const [isshowUser, setIsShowUser] = useState(false);
   const [isshowMenu, setIsShowMenu] = useState(false);
   const [isshowSocials, setIsShowSocials] = useState(false);
+  const [isshowLanguage, setIsShowLanguage] = useState(false);
 
   return (
     <header className="page-header">
       <div className="container flex align-items-center justify-content-between">
         <div className="header-logo logo position-relative">
-          <Image src="/images/2.png" alt="logo" layout="fill" />
+          <Image src="/images/2.png" alt="logo" priority={true} layout="fill" />
         </div>
         <div className="header-category-list bg-hover ">
           <div
@@ -74,7 +82,7 @@ const Header = () => {
           <Link href="/pages">
             <a className="header-nav-page header-nav-item cls-hover hidden-cursor flex">
               Pages <BsChevronDown />
-              <ul className="drop-down-list w-fit-sm is-hidden border-none">
+              <ul className="drop-down-list w-fit-sm is-hidden border-none pages-mobile">
                 {pageData.map((item) => (
                   <DropDownPage key={item.id} {...item} />
                 ))}
@@ -147,8 +155,16 @@ const Header = () => {
               <AiOutlinePlusSquare className="btn-icon-plus" />
             </button>
           </li>
-          <li className="header-socials-item change-language flex">
-            English <AiFillCaretDown className="btn-change-language" />
+          <li className="header-socials-item change-language position-relative">
+            <span onClick={() => setIsShowLanguage(!isshowLanguage)}>
+              English
+              <AiFillCaretDown className="btn-change-language" />
+            </span>
+            <FormList
+              className="show-language"
+              isShow={isshowLanguage}
+              formData={languageData}
+            />
           </li>
         </ul>
       </div>
