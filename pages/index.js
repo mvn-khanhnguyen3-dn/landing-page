@@ -10,8 +10,6 @@ export default function Home() {
     <>
       <Head>
         <title>Classified Ads</title>
-        <meta name="description" content="Landing page" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <SectionHero />
       <SectionCategory />

@@ -58,3 +58,46 @@ label {
 .form-group {
   @include pxRem(margin-bottom, 20);
 }
+
+.form-admin {
+  flex-direction: column;
+  gap: 1.5rem;
+  .form-input,
+  .form-label {
+    font-family: $font-menu;
+    @include pxRem(font-size, 15);
+  }
+  .form-label {
+    color: map-get($colors, white);
+  }
+  .form-input {
+    border: 1px solid #e4e4e4;
+    outline: none;
+    @include pxRem(padding, 25);
+    &:focus {
+      box-shadow: unset;
+    }
+  }
+  .input-desc {
+    height: 6rem;
+  }
+  .btn {
+    @include pxRem(font-size, 15);
+    border-radius: convertPxToRem(10px);
+  }
+  .btn-submit {
+    background: #7bc74d;
+  }
+  .btn-cancel {
+    background: rgb(142, 141, 141);
+  }
+}
+.product-cart,
+.form-admin {
+  width: calc(100% / 2 - 3rem);
+}
+.product-cart {
+  .feature-item {
+    width: 50%;
+  }
+}

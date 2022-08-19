@@ -31,15 +31,21 @@
   transform: scale(2.2);
   opacity: 0.1;
   background: map-get($colors, bg-primary);
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
-
-a:hover .cursor {
+.page-footer:hover ~ .cursor {
   transform: scale(2.2);
   opacity: 0.1;
   background: map-get($colors, bg-primary);
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
+
+// :hover .cursorOuter {
+//   transform: scale(2.2) !important;
+//   opacity: 0.1;
+//   background: map-get($colors, bg-primary);
+//   transition: all 0.3s;
+// }
 
 .menuWrapper::-webkit-scrollbar,
 .pages-mobile::-webkit-scrollbar {
@@ -54,10 +60,7 @@ a:hover .cursor {
 }
 
 .col-padding {
-  @include pxRem(padding, 0 20);
-  &:first-child {
-    @include pxRem(padding-left, 0);
-  }
+  @include pxRem(padding, 0 23);
 }
 
 .progress {
@@ -68,6 +71,7 @@ a:hover .cursor {
   width: convertPxToRem(46px);
   cursor: pointer;
   opacity: 0;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;

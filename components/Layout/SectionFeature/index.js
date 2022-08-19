@@ -10,7 +10,7 @@ const SectionFeature = () => {
           <span className="shape"></span>Featured Listings
         </h2>
         <ul className="items-list section-feature-list">
-          {featureData.map((feature) => (
+          {featureData?.map((feature) => (
             <FeatureItem key={feature.id} {...feature} />
           ))}
         </ul>

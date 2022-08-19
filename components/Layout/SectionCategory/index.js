@@ -10,7 +10,7 @@ const SectionCategory = () => {
           <span className="shape"></span>Post and Promote Your Listings
         </h2>
         <ul className="section-category-list items-list">
-          {categoryData.map((category) => (
+          {categoryData?.map((category) => (
             <CategoryItem key={category.id} {...category} />
           ))}
         </ul>

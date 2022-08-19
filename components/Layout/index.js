@@ -5,9 +5,11 @@ import { useEffect, useRef } from "react";
 
 const Layout = ({ children }) => {
   const progressRef = useRef();
+  const progressIconRef = useRef();
   useEffect(() => {
     const calcScrollValue = () => {
       let scrollProgress = progressRef.current;
+      let scrollProgressIcon = progressIconRef.current;
       let pos = document.documentElement.scrollTop;
       let calcHeight =
         document.documentElement.scrollHeight -
@@ -17,6 +19,11 @@ const Layout = ({ children }) => {
         scrollProgress.style.opacity = "1";
       } else {
         scrollProgress.style.opacity = "0";
+      }
+      if (scrollValue > 84) {
+        scrollProgressIcon.style.background = "#111";
+      } else {
+        scrollProgressIcon.style.background = "#fff";
       }
       scrollProgress.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -34,7 +41,9 @@ const Layout = ({ children }) => {
       <div className="cursor cursorOuter"></div>
       <div className="cursor2 cursorInter"></div>
       <div ref={progressRef} className="progress back-to-top">
-        <AiOutlineArrowUp className="progress-icon" />
+        <span ref={progressIconRef} className="progress-icon">
+          <AiOutlineArrowUp />
+        </span>
       </div>
     </>
   );

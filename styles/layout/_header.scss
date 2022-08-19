@@ -3,6 +3,9 @@
   background: map-get($colors, black);
   color: map-get($colors, white);
   text-transform: capitalize;
+  .header-logo {
+    cursor: pointer;
+  }
   .header-category-list {
     position: relative;
     cursor: pointer;

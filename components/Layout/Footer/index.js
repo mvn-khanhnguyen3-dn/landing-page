@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          {footerData.map((data) => (
+          {footerData?.map((data) => (
             <FooterColItem key={data.id} {...data} />
           ))}
           <div className="footer-col-3 col-padding">

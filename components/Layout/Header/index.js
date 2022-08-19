@@ -32,7 +32,11 @@ const Header = () => {
     <header className="page-header">
       <div className="container flex align-items-center justify-content-between">
         <div className="header-logo logo position-relative">
-          <Image src="/images/2.png" alt="logo" layout="fill" />
+          <Link href="/">
+            <a>
+              <Image src="/images/2.png" alt="logo" layout="fill" />
+            </a>
+          </Link>
         </div>
         <div className="header-category-list bg-hover ">
           <div
@@ -49,7 +53,7 @@ const Header = () => {
             }}
             className="drop-down-list"
           >
-            {data.map((item) => (
+            {data?.map((item) => (
               <DropDownCategory key={item.id} {...item} />
             ))}
           </ul>
@@ -83,7 +87,7 @@ const Header = () => {
             <a className="header-nav-page header-nav-item cls-hover hidden-cursor flex">
               Pages <BsChevronDown />
               <ul className="drop-down-list w-fit-sm is-hidden border-none pages-mobile">
-                {pageData.map((item) => (
+                {pageData?.map((item) => (
                   <DropDownPage key={item.id} {...item} />
                 ))}
               </ul>
@@ -117,7 +121,7 @@ const Header = () => {
             >
               <h4 className="drop-down-title">All Mesenges</h4>
               <ul className="drop-down-list w-fit drop-scroll border-none">
-                {mesengeData.map((item) => (
+                {mesengeData?.map((item) => (
                   <DropDownChat key={item.id} {...item} />
                 ))}
               </ul>
@@ -144,7 +148,7 @@ const Header = () => {
             >
               <h4 className="drop-down-title">User Account</h4>
               <ul className="drop-down-list w-fit drop-static">
-                {userData.map((item) => (
+                {userData?.map((item) => (
                   <DropDownUser key={item.id} {...item} />
                 ))}
               </ul>

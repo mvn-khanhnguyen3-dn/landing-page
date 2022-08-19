@@ -10,7 +10,7 @@ const SectionPrice = () => {
           <span className="shape"></span>Post and Promote Your Listings
         </h2>
         <ul className="items-list section-price-list">
-          {priceData.map((price) => (
+          {priceData?.map((price) => (
             <PriceItem key={price.id} {...price} />
           ))}
         </ul>

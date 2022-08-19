@@ -1,0 +1,65 @@
+.feature-item {
+  width: calc(100% / 4 - 1.5rem);
+  height: 100%;
+}
+.feature-item-image {
+  img {
+    border-radius: convertPxToRem(20px);
+  }
+  width: 100%;
+  min-height: convertPxToRem(250px);
+}
+.feature-item-content {
+  background: #fff;
+  @include pxRem(padding, 18 31 25 25);
+  margin-top: convertPxToRem(-37px);
+  border-radius: convertPxToRem(20px);
+  box-shadow: 0 3px 12px rgb(45 23 191 / 9%);
+  position: relative;
+}
+.feature-item-title {
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: convertPxToRem(22px);
+  color: map-get($colors, primary);
+}
+.feature-item-cap {
+  margin: convertPxToRem(2px) 0;
+  font-size: convertPxToRem(15px);
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $font-menu;
+
+  color: map-get($colors, cls-form);
+  .subCap {
+    color: map-get($colors, cls-subcap);
+    font-weight: 300;
+  }
+}
+.feature-item-price {
+  margin-bottom: convertPxToRem(18px);
+  font-weight: 400;
+  font-size: convertPxToRem(20px);
+  font-family: $font-menu;
+  display: block;
+}
+.btn-wrapper {
+  font-family: $font-menu;
+  .pro-btn {
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    @include pxRem(padding, 5 7);
+    font-size: convertPxToRem(12px);
+    font-weight: 300;
+    border-radius: convertPxToRem(6px);
+    margin-right: convertPxToRem(6px);
+  }
+  .pro-btn1 {
+    color: map-get($colors, bg-primary);
+    background: rgba(252, 79, 79, 0.1);
+  }
+  .pro-btn2 {
+    background: rgba(82, 78, 183, 0.1);
+    color: map-get($colors, cls-subcap);
+  }
+}

@@ -12,7 +12,7 @@ const FormList = (props) => {
     >
       <input className="search-sub-form" type="text" placeholder="Search..." />
       <ul className="form-list">
-        {formData.map((item) => (
+        {formData?.map((item) => (
           <FormItem key={item.id} {...item} />
         ))}
       </ul>

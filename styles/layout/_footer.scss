@@ -11,23 +11,26 @@
       font-weight: 400;
       color: map-get($colors, white);
     }
-    .footer-col-middle {
-      .listsing-item {
-        @include pxRem(margin-bottom, 11);
-        &:last-child {
-          @include pxRem(margin-bottom, 0);
-        }
-        .single-item {
-          font-size: convertPxToRem(16px);
-          color: rgba(255, 255, 255, 0.7);
-        }
+    .footer-logo {
+      @include pxRem(margin-bottom, 40);
+      @include pxRem(padding, 0 12);
+    }
+  }
+  .footer-col-middle {
+    min-width: 14%;
+    .listsing-item {
+      @include pxRem(margin-bottom, 11);
+      &:last-child {
+        @include pxRem(margin-bottom, 0);
+      }
+      .single-item {
+        font-size: convertPxToRem(16px);
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 300;
       }
     }
   }
-  .footer-logo {
-    @include pxRem(margin-bottom, 40);
-    @include pxRem(padding, 0 12);
-  }
+
   .col-1-item {
     @include pxRem(margin-bottom, 25);
     .col-icon-text {
