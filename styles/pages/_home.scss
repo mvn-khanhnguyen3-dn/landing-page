@@ -542,9 +542,6 @@
       align-items: flex-start;
       flex-wrap: wrap;
       gap: 1rem;
-      .header-logo {
-        margin-right: 2rem;
-      }
       .header-nav-list {
         flex-basis: 52%;
         max-height: 0;
@@ -575,7 +572,6 @@
     }
     .btn-toggle-wrapper {
       display: block;
-      @include pxRem(padding, 13 0);
     }
   }
   .page-main {
@@ -660,6 +656,12 @@
   }
   .items-list {
     @include pxRem(padding, 0 15);
+  }
+  .page-header {
+    .header-category-list {
+      position: absolute;
+      top: 6rem;
+    }
   }
   .page-main {
     .section-category {
