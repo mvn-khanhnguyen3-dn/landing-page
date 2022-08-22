@@ -1,7 +1,7 @@
 .bg-hover {
   &:hover {
     background: map-get($colors, bg-primary) !important;
-    color: map-get($colors, white) !important;
+    color: map-get($colors, white);
     transition: 0.1s ease-in-out;
   }
   &:hover .category-item,

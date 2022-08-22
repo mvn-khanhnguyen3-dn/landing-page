@@ -8,13 +8,13 @@ const Admin = () => {
   const [data, setData] = useState([]);
   const handleSubmit = async (items) => {
     setData((prev) => ({ ...prev, items, image }));
-    let id = Math.random(data.length * 100);
+    let id = parseFloat(Math.random(data.length * 100)).toFixed(2);
     await fetchData.postData("http://localhost:3000/api/products", {
       id: id,
       title: items.title,
       desc: items.description,
       price: items.price,
-      time: new Date().getDay(),
+      time: `${new Date().getHours()}hrs ago`,
       image,
     });
   };

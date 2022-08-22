@@ -38,13 +38,24 @@ const Header = () => {
             </a>
           </Link>
         </div>
-        <div className="header-category-list bg-hover ">
+        <div className="header-category-list">
           <div
-            className="btn-allCategory flex"
+            className="btn-allCategory flex bg-hover"
             onClick={() => setIsShowCategory(!isshowCategory)}
+            style={{
+              background: isshowCategory ? "#f76631" : "#fff",
+              color: isshowCategory ? "#fff" : "",
+            }}
           >
             <VscThreeBars className="icon-category" />
-            <h5 className="category-item flex">All Categories</h5>
+            <h5
+              style={{
+                color: isshowCategory ? "#fff" : "#344054",
+              }}
+              className="category-item flex"
+            >
+              All Categories
+            </h5>
             <BsChevronDown className="icon-category" />
           </div>
           <ul
@@ -107,6 +118,10 @@ const Header = () => {
           <li
             onClick={() => setIsShowChat(!isshowChat)}
             className="header-socials-item"
+            style={{
+              background: isshowChat ? "#f54709" : "",
+              color: isshowChat ? "#fff" : "",
+            }}
           >
             <button className="btn btn-socials btn-chat bg-hover flex">
               <SiRocketdotchat className="btn-chat-icon" />
@@ -136,6 +151,11 @@ const Header = () => {
           <li
             onClick={() => setIsShowUser(!isshowUser)}
             className="header-socials-item"
+            style={{
+              background: isshowUser ? "#f54709" : "",
+              color: isshowUser ? "#fff" : "",
+              borderRadius: "50%",
+            }}
           >
             <button className="btn btn-socials btn-user bg-hover btn-radius">
               <RiUserLine />

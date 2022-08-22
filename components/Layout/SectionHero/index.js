@@ -13,12 +13,12 @@ const SectionHero = () => {
 
     const handleMove = (e) => {
       imageElement.style.transform = `perspective(300px) rotateX(${
-        e.layerX / 100
-      }deg) rotateY(${e.layerY / 100}deg)`;
+        e.layerX / 90
+      }deg) rotateY(${e.layerY / 95}deg)`;
     };
     const handleMoveOut = () => {
       imageElement.style.transform =
-        "perspective(300px) rotateX(0deg) rotateY(0deg)";
+        "perspective(350px) rotateX(0deg) rotateY(0deg)";
     };
     imageElement.addEventListener("mousemove", handleMove);
     imageElement.addEventListener("mouseout", handleMoveOut);

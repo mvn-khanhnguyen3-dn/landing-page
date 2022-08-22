@@ -91,7 +91,7 @@
       position: relative;
       z-index: 99;
       .heroRight-image {
-        transform: perspective(convertPxToRem(300px)) rotateX(0deg)
+        transform: perspective(convertPxToRem(350px)) rotateX(0deg)
           rotateY(0deg);
         transition: all 0.15s ease-in-out;
       }

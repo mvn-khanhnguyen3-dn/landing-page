@@ -13,18 +13,15 @@
     color: #344054;
     z-index: 9999;
     background: map-get($colors, white);
-    border: 1px solid map-get($colors, bg-category);
     box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
     border-radius: convertPxToRem(8px);
     font-size: convertPxToRem(16px);
-    &:hover {
-      border: 1px solid transparent !important;
-    }
     .btn-allCategory {
       align-items: center;
       @include pxRem(padding, 0 32);
       line-height: convertPxToRem(50px);
       font-family: $font-menu;
+      border-radius: inherit;
       .icon-category {
         font-size: convertPxToRem(20px);
       }
@@ -69,13 +66,15 @@
     position: relative;
     padding-top: convertPxToRem(1px);
     margin-bottom: convertPxToRem(9px);
+    border-radius: convertPxToRem(30px);
     .btn-socials {
       color: #fff;
       background: rgba(255, 255, 255, 0.3);
       font-family: $font-menu;
+      border-radius: inherit;
     }
     .btn-chat {
-      border-radius: convertPxToRem(30px);
+      border-radius: inherit;
       gap: 0.3rem;
       @include pxRem(padding, 22 15);
       .btn-chat-icon {
