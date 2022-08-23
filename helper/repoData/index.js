@@ -10,7 +10,7 @@ const getAllDataById = (id) => {
 
 const create = ({ id, image, title, time, desc, price }) => {
   const newData = { id, image, title, time, desc, price };
-  dashboardData?.push(newData);
+  dashboardData.push(newData);
   saveData();
 };
 

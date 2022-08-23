@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import SectionFeature from "../../components/Layout/SectionFeature";
 import Form from "../../components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
-import dashboardData from "../../utils/dashboardData.json";
+// import dashboardData from "../../utils/dashboardData.json";
 import { apiUrl } from "../../config";
 
-const Admin = () => {
+export async function getServerSideProps() {
+  const res = await fetch(`${apiUrl}/products`);
+  const data = await res.json();
+
+  return { props: { data } };
+}
+const Admin = ({ dashboardData }) => {
   const [image, setImage] = useState();
   const [data, setData] = useState([]);
 
