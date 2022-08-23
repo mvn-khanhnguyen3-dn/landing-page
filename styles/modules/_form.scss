@@ -85,12 +85,6 @@ label {
     @include pxRem(font-size, 15);
     border-radius: convertPxToRem(10px);
   }
-  .btn-submit {
-    background: #7bc74d;
-  }
-  .btn-cancel {
-    background: rgb(142, 141, 141);
-  }
 }
 .product-cart,
 .form-admin {

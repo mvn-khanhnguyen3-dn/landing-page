@@ -1,5 +1,5 @@
 .page-header {
-  @include pxRem(padding, 32 0);
+  @include pxRem(padding, 33 0);
   background: map-get($colors, black);
   color: map-get($colors, white);
   text-transform: capitalize;
@@ -95,17 +95,13 @@
       @include pxRem(padding, 0 8);
       border: 1px solid transparent;
       &:hover {
-        background: 0 0;
+        background: 0;
         border: 1px solid map-get($colors, bg-primary);
         color: map-get($colors, bg-primary);
         transition: 0.4s ease-in-out;
       }
       .btn-icon-plus {
         font-size: convertPxToRem(25px);
-        &:hover {
-          border: 1px solid map-get($colors, bg-primary);
-          transition: 0.1s ease-in-out;
-        }
       }
     }
     .drop-down-title {

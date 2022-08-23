@@ -85,8 +85,9 @@ const Header = () => {
           style={{
             maxHeight: isshowMenu ? "100vh" : "0",
             opacity: isshowMenu && "1",
+            visibility: !isshowMenu ? "visible" : "",
           }}
-          className="header-nav-list flex"
+          className="header-nav-list flex "
         >
           <Link href="/">
             <a className="header-nav-item cls-hover">All Ads</a>
@@ -112,15 +113,16 @@ const Header = () => {
           style={{
             maxHeight: isshowSocials ? "100vh" : "0",
             opacity: isshowSocials && "1",
+            visibility: !isshowSocials ? "visible" : "",
           }}
-          className="header-socials-list flex"
+          className="header-socials-list flex "
         >
           <li
             onClick={() => setIsShowChat(!isshowChat)}
             className="header-socials-item"
             style={{
               background: isshowChat ? "#f54709" : "",
-              color: isshowChat ? "#fff" : "",
+              color: isshowChat ? "#fff" : "#fff",
             }}
           >
             <button className="btn btn-socials btn-chat bg-hover flex">

@@ -10,6 +10,31 @@ const postData = async (url, body) => {
     console.error("Error:", error);
   }
 };
+
+const putData = async (url, body) => {
+  const requestOption = {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  };
+  try {
+    await fetch(url, requestOption);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+const deleteData = async (url) => {
+  const requestOption = {
+    method: "DELETE",
+  };
+  try {
+    await fetch(url, requestOption);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
 export const fetchData = {
   postData,
+  putData,
+  deleteData,
 };

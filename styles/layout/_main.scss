@@ -37,13 +37,12 @@
 
 .shape {
   position: absolute;
-  width: 72px;
-  height: 50px;
+  width: convertPxToRem(72px);
+  height: convertPxToRem(50px);
   background: map-get($colors, cls-section);
   z-index: -1;
   left: 0;
   top: 0;
-  margin: 0;
   line-height: 1;
 }
 
@@ -92,4 +91,45 @@
   @include pxRem(margin-top, 6);
   background-color: #f6f6f6;
   font-weight: 700;
+}
+
+@keyframes fadeToRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeToTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

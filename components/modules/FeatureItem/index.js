@@ -1,5 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { FiDelete } from "react-icons/fi";
+import { fetchData } from "../../../helper/fetchData";
+import Modal from "../Modal";
 
 const btnFormGroup = [
   {
@@ -14,40 +18,63 @@ const btnFormGroup = [
   },
 ];
 const FeatureItem = (props) => {
-  const { image, title, desc, time, price, btnGroup } = props;
+  const { image, title, desc, time, price, btnGroup, id } = props;
+  const [isShow, setIsShow] = useState(false);
+
+  let router = useRouter();
+  const handleDelete = (id) => {
+    fetchData.deleteData(`http://localhost:3000/api/products/${id}`);
+  };
+
   return (
-    <li className="feature-item">
-      <div className="feature-item-image position-relative">
-        <Image
-          src={image || "/images/catitems1.jpeg"}
-          layout="fill"
-          alt={title}
-          objectFit="cover"
-          quality={100}
+    <>
+      <Modal
+        handleDelete={() => handleDelete(id)}
+        isShow={isShow}
+        setIsShow={setIsShow}
+      />
+      <li className="feature-item">
+        <FiDelete
+          onClick={() => setIsShow(true)}
+          className="feature-delete-icon is-hidden"
         />
-      </div>
-      <div className="feature-item-content">
-        <h4 className="feature-item-title">{title || "Title"}</h4>
-        <p className="feature-item-cap">
-          {desc || "Los Angels, CA · "}
-          <strong className="subCap">{time || "12 hrs ago"}</strong>
-        </p>
-        <span className="feature-item-price">{`$ ${price}` || "Price"}</span>
-        <div className="btn-wrapper">
-          {btnGroup
-            ? btnGroup.map((btn) => (
-                <span key={btn.id} className={btn.className}>
-                  {btn.name}
-                </span>
-              ))
-            : btnFormGroup.map((btn) => (
-                <span key={btn.id} className={btn.className}>
-                  {btn.name}
-                </span>
-              ))}
+        <div className="feature-item-image position-relative">
+          <Image
+            src={image || "/images/default-image.png"}
+            layout="fill"
+            alt={title}
+            objectFit="cover"
+            quality={100}
+          />
         </div>
-      </div>
-    </li>
+        <div className="feature-item-content">
+          <h4
+            onClick={() => router.push(`/dashboard/${id}`)}
+            className="feature-item-title"
+          >
+            {title || "Title"}
+          </h4>
+          <p className="feature-item-cap">
+            {desc || "Los Angels, CA · "}
+            <strong className="subCap">{time || "12 hrs ago"}</strong>
+          </p>
+          <span className="feature-item-price">{price}</span>
+          <div className="btn-wrapper">
+            {btnGroup
+              ? btnGroup.map((btn) => (
+                  <span key={btn.id} className={btn.className}>
+                    {btn.name}
+                  </span>
+                ))
+              : btnFormGroup.map((btn) => (
+                  <span key={btn.id} className={btn.className}>
+                    {btn.name}
+                  </span>
+                ))}
+          </div>
+        </div>
+      </li>
+    </>
   );
 };
 

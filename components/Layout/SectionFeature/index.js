@@ -1,8 +1,7 @@
 import React from "react";
 import FeatureItem from "../../modules/FeatureItem";
-import { featureData } from "../../../utils/data";
 
-const SectionFeature = () => {
+const SectionFeature = ({ featureData }) => {
   return (
     <section className="section-feature">
       <div className="container">

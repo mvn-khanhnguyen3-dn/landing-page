@@ -4,7 +4,7 @@ import FeatureItem from "../FeatureItem";
 
 const Form = (props) => {
   const { register, handleSubmit, watch, reset } = useForm();
-  const { onImageChange, onSubmitProps, image, data } = props;
+  const { onImageChange, onSubmitProps, image, data, id } = props;
   return (
     <>
       <form
@@ -43,16 +43,17 @@ const Form = (props) => {
         <div className="form-btn-group flex gap-md">
           <input value="Submit" type="submit" className="btn btn-submit" />
           <button onClick={() => reset()} className="btn btn-cancel">
-            Cancel
+            Reset
           </button>
         </div>
       </form>
       <div className="product-cart">
         <FeatureItem
+          id={id}
           image={image}
           title={watch("title") || data?.title}
           desc={watch("description")}
-          price={watch("price")}
+          price={watch("price") || data?.price}
         />
       </div>
     </>

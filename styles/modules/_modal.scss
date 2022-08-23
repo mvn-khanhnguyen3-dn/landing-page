@@ -1,0 +1,39 @@
+.modal-delete {
+  background: #fff;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  position: fixed;
+  top: 5%;
+  right: 0;
+  z-index: 2;
+  border-radius: 10px;
+  .delete-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include pxRem(font-size, 22);
+    cursor: pointer;
+  }
+  .modal-title {
+    @include pxRem(font-size, 13);
+  }
+  .btn-group {
+    gap: 0.8rem;
+    justify-content: flex-end;
+    @include pxRem(padding, 6 0);
+
+    .btn {
+      @include pxRem(font-size, 13);
+      border-radius: convertPxToRem(10px);
+      @include pxRem(padding, 6 8);
+      height: 20px;
+    }
+    .btn-delete {
+      background: map-get($colors, bg-delete);
+      color: map-get($colors, white);
+    }
+  }
+}
