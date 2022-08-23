@@ -1,5 +1,5 @@
 .feature-item {
-  width: calc(100% / 4 - 1.5rem);
+  width: calc(100% / 4 - 1.2rem);
   height: 100%;
 }
 .feature-item-image {
@@ -12,7 +12,7 @@
 .feature-item-content {
   background: #fff;
   @include pxRem(padding, 18 31 25 25);
-  margin-top: convertPxToRem(-37px);
+  margin-top: convertPxToRem(-32px);
   border-radius: convertPxToRem(20px);
   box-shadow: 0 3px 12px rgb(45 23 191 / 9%);
   position: relative;
@@ -48,19 +48,28 @@
   .pro-btn {
     border: 1px solid transparent;
     text-transform: uppercase;
-    @include pxRem(padding, 5 7);
+    @include pxRem(padding, 4 7);
     font-size: convertPxToRem(12px);
-    font-weight: 300;
+    font-weight: 400;
+    display: inline-block;
     border-radius: convertPxToRem(6px);
-    margin-right: convertPxToRem(6px);
+    transition: 0.4s all ease-in-out;
   }
   .pro-btn1 {
     color: map-get($colors, bg-primary);
     background: rgba(252, 79, 79, 0.1);
-    @include pxRem(margin-right, 6);
+    @include pxRem(margin-right, 7);
+    &:hover {
+      background: map-get($colors, bg-primary);
+      color: map-get($colors, white);
+    }
   }
   .pro-btn2 {
     background: rgba(82, 78, 183, 0.1);
     color: map-get($colors, cls-subcap);
+    &:hover {
+      background: map-get($colors, cls-subcap);
+      color: map-get($colors, white);
+    }
   }
 }

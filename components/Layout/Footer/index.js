@@ -53,7 +53,7 @@ const Footer = () => {
             <FooterColItem key={data.id} {...data} />
           ))}
           <div className="footer-col-3 col-padding">
-            <h4 className="footer-title">Newsletter</h4>
+            <h4 className="footer-title title-letter">Newsletter</h4>
             <p className="col-3-desc">
               Be the first one to know news, offers and events weekly in your.
               Unsubscribe whenever you like with one click.

@@ -1,5 +1,5 @@
 .page-footer {
-  @include pxRem(padding-top, 100);
+  @include pxRem(padding-top, 95);
   @include pxRem(padding-left, 10);
   @include pxRem(padding-right, 10);
   background: map-get($colors, bg-section-hero);
@@ -10,6 +10,9 @@
       margin-bottom: convertPxToRem(34px);
       font-weight: 400;
       color: map-get($colors, white);
+    }
+    .title-letter {
+      font-size: convertPxToRem(22px);
     }
     .footer-logo {
       @include pxRem(margin-bottom, 40);

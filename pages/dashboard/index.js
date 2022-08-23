@@ -26,7 +26,9 @@ const Admin = ({ dashboardData }) => {
       time: `${new Date().getHours()} hrs ago`,
       image,
     });
-    location.reload();
+    setTimeout(() => {
+      location.reload();
+    }, 1000);
   };
   const onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
