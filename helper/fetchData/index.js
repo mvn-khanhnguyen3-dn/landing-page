@@ -23,15 +23,11 @@ const putData = async (url, body) => {
     console.error("Error:", error);
   }
 };
-const deleteData = async (url) => {
+const deleteData = (url) => {
   const requestOption = {
     method: "DELETE",
   };
-  try {
-    await fetch(url, requestOption);
-  } catch (error) {
-    console.error("Error:", error);
-  }
+  return fetch(url, requestOption);
 };
 export const fetchData = {
   postData,
