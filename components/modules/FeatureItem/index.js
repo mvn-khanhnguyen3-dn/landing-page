@@ -25,7 +25,7 @@ const FeatureItem = (props) => {
   let router = useRouter();
   const handleDelete = (id) => {
     fetchData.deleteData(`${apiUrl}/products/${id}`);
-    location.reload();
+    // location.reload();
   };
 
   return (
