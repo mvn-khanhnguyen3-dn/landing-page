@@ -19,14 +19,14 @@ const btnFormGroup = [
   },
 ];
 const FeatureItem = (props) => {
-  const { image, title, desc, time, price, btnGroup, id, handleDelete } = props;
+  const { image, title, desc, time, price, btnGroup, id } = props;
   const [isShow, setIsShow] = useState(false);
 
   let router = useRouter();
-  // const handleDelete = (id) => {
-  //   fetchData.deleteData(`${apiUrl}/products/${id}`);
-  //   // location.reload();
-  // };
+  const handleDelete = (id) => {
+    fetchData.deleteData(`${apiUrl}/products/${id}`);
+    // location.reload();
+  };
 
   return (
     <>

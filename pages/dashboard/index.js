@@ -13,14 +13,8 @@ export async function getServerSideProps() {
 }
 const Admin = ({ dashboardData }) => {
   const [image, setImage] = useState();
-  const [data, setData] = useState(dashboardData);
-  console.log(data);
+  const [data, setData] = useState([]);
 
-  const handleDelete = (id) => {
-    fetchData
-      .deleteData(`${apiUrl}/products/${id}`)
-      .then(() => setData((item) => item.filter((x) => x.id !== id)));
-  };
   const handleSubmit = (items) => {
     setData((prev) => ({ ...prev, items, image }));
     let id = parseFloat(Math.random(data.length * 100000)).toFixed(2);
@@ -50,11 +44,10 @@ const Admin = ({ dashboardData }) => {
             onImageChange={onImageChange}
             image={image}
             data={data}
-            handleDelete={handleDelete}
           />
         </div>
         <div className="section-admin-products">
-          <SectionFeature featureData={data} />
+          <SectionFeature featureData={dashboardData} />
         </div>
       </div>
     </section>

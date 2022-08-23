@@ -4,7 +4,7 @@ import FeatureItem from "../FeatureItem";
 
 const Form = (props) => {
   const { register, handleSubmit, watch, reset } = useForm();
-  const { onImageChange, onSubmitProps, image, data, id, handleDelete } = props;
+  const { onImageChange, onSubmitProps, image, data, id } = props;
   return (
     <>
       <form
@@ -54,7 +54,6 @@ const Form = (props) => {
           title={watch("title") || data?.title}
           desc={watch("description")}
           price={watch("price") || data?.price}
-          handleDelete={handleDelete}
         />
       </div>
     </>
