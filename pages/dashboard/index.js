@@ -5,7 +5,7 @@ import { fetchData } from "../../helper/fetchData";
 // import dashboardData from "../../utils/dashboardData.json";
 import { apiUrl } from "../../config";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${apiUrl}/products`);
   const data = await res.json();
 
@@ -26,6 +26,7 @@ const Admin = ({ dashboardData }) => {
       time: `${new Date().getHours()} hrs ago`,
       image,
     });
+    location.reload();
   };
   const onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
