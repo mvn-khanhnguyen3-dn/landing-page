@@ -9,7 +9,7 @@ export async function getServerSideProps() {
   const res = await fetch(`${apiUrl}/products`);
   const data = await res.json();
 
-  return { props: { data } };
+  return { props: { dashboardData: data } };
 }
 const Admin = ({ dashboardData }) => {
   const [image, setImage] = useState();
