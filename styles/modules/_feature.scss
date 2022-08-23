@@ -57,6 +57,7 @@
   .pro-btn1 {
     color: map-get($colors, bg-primary);
     background: rgba(252, 79, 79, 0.1);
+    @include pxRem(margin-right, 6);
   }
   .pro-btn2 {
     background: rgba(82, 78, 183, 0.1);

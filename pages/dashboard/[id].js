@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Form from "../../components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
 import { useRouter } from "next/router";
+import { apiUrl } from "../../config";
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:3000/api/products/${params.id}`);
+  const res = await fetch(`${apiUrl}/products/${params.id}`);
   const data = await res.json();
 
   return { props: { data } };
@@ -14,7 +15,7 @@ const Admin = ({ data }) => {
   let router = useRouter();
   let id = router.query.id;
   const handleSubmit = (items) => {
-    fetchData.putData(`http://localhost:3000/api/products/${id}`, {
+    fetchData.putData(`${apiUrl}/products/${id}`, {
       id: id,
       title: items.title,
       desc: items.description,
@@ -29,7 +30,6 @@ const Admin = ({ data }) => {
       let img = event.target.files[0];
       setImage(URL.createObjectURL(img));
     }
-    console.log(event.target.files[0]);
   };
 
   return (

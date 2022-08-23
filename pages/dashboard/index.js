@@ -3,6 +3,7 @@ import SectionFeature from "../../components/Layout/SectionFeature";
 import Form from "../../components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
 import dashboardData from "../../utils/dashboardData.json";
+import { apiUrl } from "../../config";
 
 const Admin = () => {
   const [image, setImage] = useState();
@@ -11,7 +12,7 @@ const Admin = () => {
   const handleSubmit = (items) => {
     setData((prev) => ({ ...prev, items, image }));
     let id = parseFloat(Math.random(data.length * 100000)).toFixed(2);
-    fetchData.postData("http://localhost:3000/api/products", {
+    fetchData.postData(`${apiUrl}/products`, {
       id: id,
       title: items.title,
       desc: items.description,

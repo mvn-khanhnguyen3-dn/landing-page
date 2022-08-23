@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { FiDelete } from "react-icons/fi";
 import { fetchData } from "../../../helper/fetchData";
 import Modal from "../Modal";
+import { apiUrl } from "../../../config";
 
 const btnFormGroup = [
   {
@@ -23,7 +24,7 @@ const FeatureItem = (props) => {
 
   let router = useRouter();
   const handleDelete = (id) => {
-    fetchData.deleteData(`http://localhost:3000/api/products/${id}`);
+    fetchData.deleteData(`${apiUrl}/products/${id}`);
   };
 
   return (
