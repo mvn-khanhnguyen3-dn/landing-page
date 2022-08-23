@@ -1,10 +1,10 @@
 [
-    {
-        "id": 1,
-        "image": "/images/featured8.jpg",
-        "title": "Apple smartwatch 6",
-        "desc": "Los Angels, CA · ",
-        "time": "12hrs ago",
-        "price": "$139.40"
-    }
+  {
+    "id": 1,
+    "image": "/images/featured8.jpg",
+    "title": "Apple smartwatch 6",
+    "desc": "Los Angels, CA · ",
+    "time": "12hrs ago",
+    "price": "$139.40"
+  }
 ]

@@ -5,7 +5,7 @@ import { fetchData } from "../../helper/fetchData";
 // import dashboardData from "../../utils/dashboardData.json";
 import { apiUrl } from "../../config";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`${apiUrl}/products`);
   const data = await res.json();
 
