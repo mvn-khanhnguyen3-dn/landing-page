@@ -13,7 +13,7 @@ export async function getServerSideProps() {
 }
 const Admin = ({ dashboardData }) => {
   const [image, setImage] = useState();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(dashboardData);
 
   const handleSubmit = (items) => {
     setData((prev) => ({ ...prev, items, image }));
@@ -47,7 +47,7 @@ const Admin = ({ dashboardData }) => {
           />
         </div>
         <div className="section-admin-products">
-          <SectionFeature featureData={dashboardData} />
+          <SectionFeature featureData={data} />
         </div>
       </div>
     </section>
