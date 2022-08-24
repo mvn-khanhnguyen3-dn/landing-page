@@ -38,7 +38,7 @@
 .shape {
   position: absolute;
   width: convertPxToRem(72px);
-  height: convertPxToRem(50px);
+  height: 100%;
   background: map-get($colors, cls-section);
   z-index: -1;
   left: 0;
@@ -140,7 +140,7 @@
 
 @keyframes slideIn {
   0% {
-    transform: translateY(50px);
+    transform: translateX(-150px);
     opacity: 0;
   }
   100% {

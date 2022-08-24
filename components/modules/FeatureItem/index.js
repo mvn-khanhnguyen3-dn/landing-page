@@ -51,7 +51,7 @@ const FeatureItem = (props) => {
         </div>
         <div className="feature-item-content">
           <h4
-            onClick={() => router.push(`/dashboard/${id}`)}
+            onClick={() => isShow && router.push(`/dashboard/${id}`)}
             className="feature-item-title"
           >
             {title || "Title"}

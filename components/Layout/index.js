@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 const Layout = ({ children }) => {
   const progressRef = useRef();
   const progressIconRef = useRef();
+
   useEffect(() => {
     const calcScrollValue = () => {
       let scrollProgress = progressRef.current;
