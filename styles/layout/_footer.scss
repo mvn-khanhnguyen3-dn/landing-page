@@ -5,6 +5,7 @@
   background: map-get($colors, bg-section-hero);
   .footer-container {
     @include pxRem(padding-bottom, 25);
+    flex-wrap: wrap;
     .footer-title {
       font-size: convertPxToRem(20px);
       margin-bottom: convertPxToRem(34px);

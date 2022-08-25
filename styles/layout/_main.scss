@@ -49,9 +49,9 @@
 .items-list {
   @include pxRem(margin-top, 68);
   @include pxRem(margin-bottom, 27);
+  @include pxRem(padding, 0 32);
   display: flex;
   flex-wrap: wrap;
-  @include pxRem(padding, 0 32);
   gap: 1.2rem;
 }
 
@@ -93,10 +93,98 @@
   font-weight: 700;
 }
 
+.lazy-scroll,
+.about-lazy-scroll,
+.lazy-scroll-desc,
+.col-1-item,
+.listsing-item,
+.footer-lazy-scroll,
+.scroll-to-left {
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.lazy-scroll.active {
+  opacity: 1;
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(4),
+  &:nth-child(5) {
+    animation: fadeToLeft 1s ease-in-out;
+  }
+  &:nth-child(3) {
+    animation: fadeToTop 1s ease-in-out;
+  }
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(9),
+  &:nth-child(10) {
+    animation: fadeToRight 1s ease-in-out;
+  }
+  &:nth-child(8) {
+    animation: fadeToBottom 1s ease-in-out;
+  }
+}
+.about-lazy-scroll.active {
+  opacity: 1;
+  &:nth-child(2) {
+    animation: fadeToRight 1s ease-in-out;
+  }
+  &:nth-child(1) {
+    animation: fadeToLeft 1s ease-in-out;
+  }
+}
+.lazy-scroll-desc.active,
+.footer-lazy-scroll.active {
+  opacity: 1;
+  animation: fadeToTop 1s ease-in-out;
+}
+.col-1-item.active {
+  opacity: 1;
+  animation: fadeToTop 1s ease-in-out;
+  animation-delay: 0;
+  &:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+}
+.listsing-item.active {
+  opacity: 1;
+  animation: fadeToTop 1s ease-in-out;
+  animation-delay: 0;
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(5) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(6) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(7) {
+    animation-delay: 0.4s;
+  }
+}
+.scroll-to-left.active {
+  opacity: 1;
+  animation: fadeToRight 1s ease-in-out;
+}
+
 @keyframes fadeToRight {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
@@ -106,7 +194,7 @@
 @keyframes fadeToTop {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -116,7 +204,7 @@
 @keyframes fadeToBottom {
   from {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -126,25 +214,20 @@
 @keyframes fadeToLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
     transform: translateX(0px);
   }
 }
-
-.paraFadeIn {
-  animation: slideIn 0.6s ease 0.25s forwards;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-150px);
+@keyframes fadeToShow {
+  from {
     opacity: 0;
+    transform: scale(0.5);
   }
-  100% {
-    transform: translateY(0);
+  to {
     opacity: 1;
+    transform: scale(1);
   }
 }

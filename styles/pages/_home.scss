@@ -6,10 +6,9 @@
     @include pxRem(padding, 150 0 75);
     .pX-12 {
       @include pxRem(padding, 0 52);
-      gap: 5rem;
     }
     .heroLeft {
-      width: calc(100% / 2 - 1rem);
+      width: 50%;
       .heroLeft-title {
         font-size: convertPxToRem(64px);
         color: map-get($colors, white);
@@ -24,7 +23,8 @@
       }
       .heroLeft-form-search {
         background: #fff;
-        padding: 20px;
+        @include pxRem(margin-right, 10);
+        @include pxRem(padding, 20);
         padding-bottom: 0;
         border-radius: 8px;
         flex-wrap: wrap;
@@ -45,6 +45,7 @@
           font-weight: 400;
           @include pxRem(padding, 0 30);
           font-size: 16px;
+          animation: fadeToRight 1s ease-in-out;
         }
         .searchBox-btn {
           cursor: pointer;
@@ -55,6 +56,7 @@
           background: map-get($colors, bg-primary);
           text-transform: capitalize;
           border: none;
+          animation: fadeToShow 1s ease-in-out;
         }
       }
       .select-form {
@@ -317,6 +319,7 @@
         font-weight: 400;
         letter-spacing: 0.5px;
         font-size: convertPxToRem(15px);
+        @include pxRem(padding, 0 15);
       }
     }
     .btn-wrapper {
@@ -446,28 +449,58 @@
     }
     .section-category {
       .category-item {
-        width: calc(100% / 4 - 1.15rem);
+        width: calc(100% / 4 - 0.9rem);
+      }
+    }
+  }
+  .page-footer {
+    .footer-col-middle {
+      min-width: 10%;
+    }
+  }
+  .menuWrapper {
+    min-width: 40rem;
+    max-height: 20rem;
+    gap: 1rem;
+    overflow-y: scroll !important;
+  }
+}
+@include respond-below(larger) {
+  .menuWrapper {
+    min-width: 32rem;
+  }
+  .page-main {
+    .section-about {
+      .about-image1,
+      .about-image2 {
+        width: 16%;
+        top: 20%;
+      }
+      .about-image1 {
+        left: 7%;
+      }
+      .about-image2 {
+        right: 7%;
       }
     }
   }
   .page-footer {
     .footer-container {
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 0.66rem;
-    }
-    .footer-col-3 {
-      width: 30%;
-    }
-    .footer-col-middle {
-      min-width: 10%;
+      justify-content: space-between;
+      gap: 1.5rem;
+      .footer-col-3,
+      .footer-col-middle {
+        min-width: calc(50% - 1.5rem);
+      }
     }
   }
 }
+
 @include respond-below(large) {
-  .container {
-    @include pxRem(padding, 0 10);
+  .col-padding {
+    @include pxRem(padding, 0);
   }
+
   .page-main {
     .section-padding {
       padding-top: 70px;
@@ -501,11 +534,10 @@
     }
     .section-about {
       .about-container {
-        width: 80%;
-      }
-      .about-image1,
-      .about-image2 {
-        display: none;
+        width: 100%;
+        .about-desc {
+          @include pxRem(padding, 0 50);
+        }
       }
     }
   }
@@ -513,7 +545,7 @@
 
 @include respond-below(wide) {
   .container {
-    @include pxRem(padding, 0 35);
+    @include pxRem(padding, 0 100);
   }
   .drop-down-list {
     .drop-down-category {
@@ -528,8 +560,7 @@
     left: 0;
     min-width: 100%;
     display: none;
-    min-height: convertPxToRem(250px);
-    max-height: convertPxToRem(250px);
+    max-height: convertPxToRem(255px);
     position: inherit;
     overflow: scroll !important;
   }
@@ -584,10 +615,7 @@
   .page-main {
     .section-category {
       .category-item {
-        width: calc(100% / 3 - 1rem);
-        .category-item-image {
-          height: convertPxToRem(200px);
-        }
+        width: calc(100% / 3 - 0.8rem);
       }
     }
     .section-feature {
@@ -595,13 +623,32 @@
         .feature-item {
           width: 100%;
         }
+        .feature-item-image {
+          height: 32rem;
+        }
       }
+    }
+    .section-about {
+      .about-image1,
+      .about-image2 {
+        display: none;
+      }
+      .about-container {
+        .about-desc {
+          @include pxRem(padding, 0);
+        }
+      }
+    }
+  }
+  .page-footer {
+    .footer-col-3 {
+      width: 100%;
     }
   }
 }
 @include respond-below(medium) {
   .container {
-    @include pxRem(padding, 0 70);
+    @include pxRem(padding, 0 40);
   }
   .col-padding {
     @include pxRem(padding, 0);
@@ -639,7 +686,7 @@
     }
     .section-category {
       .category-item {
-        width: calc(100% / 2 - 0.75rem);
+        width: calc(100% / 2 - 0.6rem);
       }
     }
     .section-about {

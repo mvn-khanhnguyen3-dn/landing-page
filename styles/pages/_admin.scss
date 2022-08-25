@@ -37,28 +37,9 @@
   }
 }
 @include respond-below(large) {
-  .feature-item {
-    width: 100% !important;
-  }
-  .section-feature {
-    .section-feature-list {
-      .feature-item-image {
-        height: 32rem;
-      }
-    }
-  }
-  .page-footer {
-    .footer-container {
-      justify-content: space-between;
-      gap: 1.5rem;
-      .footer-col-3 {
-        width: 100%;
-      }
-      .footer-col-middle {
-        min-width: calc(50% - 1.5rem);
-      }
-    }
-  }
+  // .feature-item {
+  //   width: 100% !important;
+  // }
 }
 @include respond-below(medium) {
   .product-cart,

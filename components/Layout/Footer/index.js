@@ -1,14 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FiMapPin } from "react-icons/fi";
 import { AiFillYoutube } from "react-icons/ai";
 import { BsTelephone, BsFacebook } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import { footerData } from "../../../utils/data";
 import FooterColItem from "../../modules/FooterColItem";
+import { useHookScroll } from "../../../hook/useScroll";
 
 const Footer = () => {
+  useEffect(() => {
+    const reveal = () => {
+      const footerCol = document.querySelectorAll(".col-1-item");
+      const footerColMiddle = document.querySelectorAll(".listsing-item");
+      const footerScroll = document.querySelectorAll(".footer-lazy-scroll");
+      const scrollToLeft = document.querySelector(".scroll-to-left");
+
+      useHookScroll.useSimpleScroll(scrollToLeft);
+
+      useHookScroll.useScroll(footerCol);
+      useHookScroll.useScroll(footerColMiddle);
+      useHookScroll.useScroll(footerScroll);
+    };
+    window.addEventListener("scroll", reveal);
+  }, []);
   return (
     <footer className="page-footer">
       <div className="container">
@@ -54,11 +70,11 @@ const Footer = () => {
           ))}
           <div className="footer-col-3 col-padding">
             <h4 className="footer-title title-letter">Newsletter</h4>
-            <p className="col-3-desc">
+            <p className="col-3-desc footer-lazy-scroll">
               Be the first one to know news, offers and events weekly in your.
               Unsubscribe whenever you like with one click.
             </p>
-            <form className="col-3-form position-relative">
+            <form className="col-3-form position-relative scroll-to-left">
               <input
                 className="col-3-input"
                 type="text"
@@ -71,10 +87,10 @@ const Footer = () => {
             </form>
             <ul className="footer-socials flex align-items-center">
               <li className="socials-item">
-                <BsFacebook />
+                <BsFacebook className="footer-lazy-scroll" />
               </li>
               <li className="socials-item">
-                <AiFillYoutube />
+                <AiFillYoutube className="footer-lazy-scroll" />
               </li>
             </ul>
           </div>
