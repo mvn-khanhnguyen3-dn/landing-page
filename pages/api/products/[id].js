@@ -27,7 +27,7 @@ export default function handler(req, res) {
   function deleteData() {
     try {
       const id = req.query.id;
-      const dashboardDataDelete = dashboardData.find(
+      const dashboardDataDelete = dashboardData.filter(
         (item) => item.id.toString() === id.toString()
       );
       if (!dashboardDataDelete) {
@@ -35,11 +35,11 @@ export default function handler(req, res) {
         res.end();
         return;
       }
-      const index = dashboardData.findIndex(
-        (item) => item.id.toString() === id.toString()
-      );
-      dashboardData.slice(index, 1);
-      return res.status(200).json({});
+      // const index = dashboardData.findIndex(
+      //   (item) => item.id.toString() === id.toString()
+      // );
+      // dashboardData.slice(index, 1);
+      return res.status(200).json(dashboardDataDelete);
     } catch (error) {
       return res.status(400).json({ message: error });
     }
