@@ -26,7 +26,6 @@ export default function handler(req, res) {
   }
   function deleteData() {
     try {
-      // repoData.delete(req.query.id);
       const id = req.query.id;
       const dashboardDataDelete = dashboardData.find(
         (item) => item.id.toString() === id.toString()
@@ -35,7 +34,7 @@ export default function handler(req, res) {
         (item) => item.id.toString() === id.toString()
       );
       dashboardData.slice(index, 1);
-      return res.status(200).json(dashboardDataDelete);
+      return res.status(200).json({});
     } catch (error) {
       return res.status(400).json({ message: error });
     }
