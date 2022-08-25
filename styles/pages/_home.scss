@@ -329,6 +329,7 @@
       .btn-main {
         font-family: $font-menu;
         transition: 0.4s;
+        cursor: pointer;
         border: 1px solid transparent;
         color: map-get($colors, white);
         @include pxRem(padding, 16 45);
@@ -581,12 +582,13 @@
       flex-wrap: wrap;
       gap: 1rem;
       .header-nav-list {
-        flex-basis: 52%;
+        flex-basis: 60%;
         max-height: 0;
         line-height: convertPxToRem(30px);
         display: block;
         transition: all 0.4s ease-in-out;
         opacity: 0;
+        padding-right: 25%;
         .header-nav-item {
           @include pxRem(padding, 10 20);
           display: block;
@@ -721,12 +723,13 @@
   .page-header {
     .header-category-list {
       position: absolute;
-      top: 6rem;
+      top: 8rem;
     }
     .container {
       .header-nav-list {
-        flex-basis: 100%;
-        padding-left: 70%;
+        flex-basis: 70%;
+        padding-top: 8%;
+        // padding-left: 70%;
       }
     }
   }
@@ -761,12 +764,18 @@
 }
 @include respond-below(small) {
   .page-header {
-    .header-category-list {
-      @include pxRem(margin-top, 2rem);
-    }
     .header-nav-list {
       .header-nav-item {
         font-size: convertPxToRem(12px);
+      }
+    }
+  }
+  .page-main {
+    .section-feature {
+      .section-feature-list {
+        .feature-item-image {
+          height: 25rem;
+        }
       }
     }
   }

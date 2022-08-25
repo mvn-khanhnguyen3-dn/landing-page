@@ -49,7 +49,7 @@ const Admin = ({ dashboardData }) => {
           />
         </div>
         <div className="section-admin-products">
-          <SectionFeature featureData={data} />
+          <SectionFeature featureData={dashboardData} />
         </div>
       </div>
     </section>
