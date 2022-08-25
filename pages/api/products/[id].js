@@ -1,4 +1,5 @@
 import { repoData } from "../../../helper/repoData";
+import dashboardData from "../../../utils/dashboardData.json";
 
 export default function handler(req, res) {
   switch (req.method) {
@@ -25,8 +26,16 @@ export default function handler(req, res) {
   }
   function deleteData() {
     try {
-      repoData.delete(req.query.id);
-      return res.status(200).json({});
+      // repoData.delete(req.query.id);
+      const id = req.query.id;
+      const dashboardDataDelete = dashboardData.find(
+        (item) => item.id.toString() === id.toString()
+      );
+      const index = dashboardData.findIndex(
+        (item) => item.id.toString() === id.toString()
+      );
+      dashboardData.slice(index, 1);
+      return res.status(200).json(dashboardDataDelete);
     } catch (error) {
       return res.status(400).json({ message: error });
     }
