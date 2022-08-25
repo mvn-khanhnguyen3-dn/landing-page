@@ -30,6 +30,11 @@ export default function handler(req, res) {
       const dashboardDataDelete = dashboardData.find(
         (item) => item.id.toString() === id.toString()
       );
+      if (!dashboardDataDelete) {
+        res.status(404);
+        res.end();
+        return;
+      }
       const index = dashboardData.findIndex(
         (item) => item.id.toString() === id.toString()
       );
