@@ -197,6 +197,7 @@
     @include pxRem(margin-top, 119);
     .section-price-list {
       gap: 1.5rem;
+      @include pxRem(padding-bottom, 16);
     }
     .price-item {
       @include pxRem(padding, 33 23);
@@ -262,7 +263,7 @@
       }
       .btn-item-price {
         @include pxRem(margin-top, 31);
-
+        @include pxRem(margin-bottom, 8);
         z-index: 2;
         font-family: $font-menu;
         border: 1px solid #d0d5dd;
@@ -325,6 +326,8 @@
     .btn-wrapper {
       @include pxRem(margin-top, 38);
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1.2rem;
       .btn-main {
         font-family: $font-menu;
@@ -450,7 +453,7 @@
     }
     .section-category {
       .category-item {
-        width: calc(100% / 4 - 0.9rem);
+        width: calc(100% / 4 - 1.13rem);
       }
     }
   }
@@ -617,7 +620,7 @@
   .page-main {
     .section-category {
       .category-item {
-        width: calc(100% / 3 - 0.8rem);
+        width: calc(100% / 3 - 1rem);
       }
     }
     .section-feature {
@@ -688,7 +691,7 @@
     }
     .section-category {
       .category-item {
-        width: calc(100% / 2 - 0.6rem);
+        width: calc(100% / 2 - 0.75rem);
       }
     }
     .section-about {

@@ -52,7 +52,7 @@
   @include pxRem(padding, 0 32);
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .title-center {
@@ -164,13 +164,13 @@
     animation-delay: 0.2s;
   }
   &:nth-child(4) {
-    animation-delay: 0.2s;
+    animation-delay: 0.25s;
   }
   &:nth-child(5) {
     animation-delay: 0.3s;
   }
   &:nth-child(6) {
-    animation-delay: 0.3s;
+    animation-delay: 0.35s;
   }
   &:nth-child(7) {
     animation-delay: 0.4s;
