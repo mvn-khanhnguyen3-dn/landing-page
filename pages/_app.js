@@ -1,11 +1,17 @@
 import "../styles/styles.scss";
-import Layout from "../components/Layout";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
+const DynamicHeader = dynamic(() => import("@/components/Layout"), {
+  suspense: true,
+});
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Suspense fallback={`Loading...`}>
+      <DynamicHeader>
+        <Component {...pageProps} />
+      </DynamicHeader>
+    </Suspense>
   );
 }
 

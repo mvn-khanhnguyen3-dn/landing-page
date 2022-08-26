@@ -27,6 +27,7 @@ const SectionHero = () => {
       imageElement.removeEventListener("mouseout", handleMoveOut);
     };
   }, []);
+
   return (
     <section className="section-hero">
       <div className="container flex align-items-center justify-content-between pX-12">
@@ -67,6 +68,7 @@ const SectionHero = () => {
               height={523}
               objectPosition="center"
               alt="heroRight-image"
+              quality={100}
             />
           </div>
           <div className="heroRight-sub-image position-relative">
@@ -78,6 +80,7 @@ const SectionHero = () => {
               alt="heartbeat"
               width={126}
               height={126}
+              quality={100}
             />
           </div>
         </div>

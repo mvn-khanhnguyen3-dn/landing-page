@@ -9,6 +9,7 @@
   .header-category-list {
     position: relative;
     cursor: pointer;
+    @include pxRem(margin-right, -13);
     line-height: 1.2;
     color: #344054;
     z-index: 9999;
@@ -18,7 +19,8 @@
     font-size: convertPxToRem(16px);
     .btn-allCategory {
       align-items: center;
-      @include pxRem(padding, 0 32);
+      @include pxRem(padding-left, 24);
+      @include pxRem(padding-right, 32);
       line-height: convertPxToRem(50px);
       font-family: $font-menu;
       border-radius: inherit;
@@ -27,8 +29,8 @@
       }
     }
     .category-item {
-      @include pxRem(padding-left, 10);
-      @include pxRem(padding-right, 20);
+      @include pxRem(padding-left, 16);
+      @include pxRem(padding-right, 24);
       font-weight: 400;
       color: #344054;
       font-size: convertPxToRem(16px);

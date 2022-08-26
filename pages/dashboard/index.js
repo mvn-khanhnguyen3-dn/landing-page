@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import SectionFeature from "../../components/Layout/SectionFeature";
-import Form from "../../components/modules/Form";
+import React, { useState } from "react";
+import SectionFeature from "@/components/Layout/SectionFeature";
+import Form from "@/components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
-// import dashboardData from "../../utils/dashboardData.json";
 import { apiUrl } from "../../config";
 
 export async function getServerSideProps() {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Form from "../../components/modules/Form";
+import Form from "@/components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
 import { useRouter } from "next/router";
 import { apiUrl } from "../../config";
