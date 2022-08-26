@@ -7,7 +7,6 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/images/favicon.png" />
         <meta name="description" content="Landing page" />
-        <meta property="og:image" content="Classified Ads" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="keywords"
