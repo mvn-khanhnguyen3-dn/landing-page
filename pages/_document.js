@@ -7,7 +7,20 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/images/favicon.png" />
         <meta name="description" content="Landing page" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width"
+          key="viewport"
+        />
+        <meta property="og:title" content="Classified Ads" />
+        <meta
+          property="og:url"
+          content="https://landing-page-theta-ten.vercel.app/"
+        />
+        <meta
+          property="og:image"
+          content="https://landing-page-theta-ten.vercel.app/_next/image?url=%2Fimages%2Ffeatured8.jpg&w=1920&q=100"
+        />
         <meta
           name="keywords"
           content="ads, advertise, advertising, classified, classified ads, database, directory, jobs, listing, local, portal"
