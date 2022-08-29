@@ -6,7 +6,7 @@ const PriceItem = (props) => {
     <li className="price-item">
       <h4 className="price-item-title mutilate-hover">{priceTitle}</h4>
       <ul className="price-item-list">
-        {priceList.map((item) => (
+        {priceList?.map((item) => (
           <li key={item.id} className="item-listing">
             <span className="icon-listing">{item.icon}</span>
             {item.desc}

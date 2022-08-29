@@ -32,6 +32,9 @@ const Layout = ({ children }) => {
       scrollProgress.style.background = `conic-gradient(#f76631 ${scrollValue}%, #d0d0d4 ${scrollValue}%)`;
     };
     window.addEventListener("scroll", calcScrollValue);
+    return () => {
+      window.removeEventListener("scroll", calcScrollValue);
+    };
   }, []);
   return (
     <>

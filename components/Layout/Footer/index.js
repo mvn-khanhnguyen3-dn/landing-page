@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { FiMapPin } from "react-icons/fi";
 import { AiFillYoutube } from "react-icons/ai";
 import { BsTelephone, BsFacebook } from "react-icons/bs";
@@ -10,23 +10,29 @@ import FooterColItem from "../../modules/FooterColItem";
 import { useHookScroll } from "../../../hook/useScroll";
 
 const Footer = () => {
+  let footerRef = useRef();
   useEffect(() => {
     const reveal = () => {
-      const footerCol = document.querySelectorAll(".col-1-item");
-      const footerColMiddle = document.querySelectorAll(".listsing-item");
-      const footerScroll = document.querySelectorAll(".footer-lazy-scroll");
-      const scrollToLeft = document.querySelector(".scroll-to-left");
+      const footerCol = footerRef.current.querySelectorAll(".col-1-item");
+      const footerColMiddle =
+        footerRef.current.querySelectorAll(".listsing-item");
+      const footerScroll = footerRef.current.querySelectorAll(
+        ".footer-lazy-scroll"
+      );
+      const scrollToLeft = footerRef.current.querySelector(".scroll-to-left");
 
       useHookScroll.useSimpleScroll(scrollToLeft);
-
       useHookScroll.useScroll(footerCol);
       useHookScroll.useScroll(footerColMiddle);
       useHookScroll.useScroll(footerScroll);
     };
     window.addEventListener("scroll", reveal);
+    return () => {
+      window.removeEventListener("scroll", reveal);
+    };
   }, []);
   return (
-    <footer className="page-footer">
+    <footer ref={footerRef} className="page-footer">
       <div className="container">
         <div className="footer-container flex justify-content-between">
           <div className="footer-col-1 col-padding">

@@ -15,7 +15,7 @@ const SingleProduct = (props) => {
                 height={80}
                 objectFit="cover"
                 quality={100}
-                alt=""
+                alt={item?.subTitle}
               />
             </a>
             <h5 className="single-title single-product-title">

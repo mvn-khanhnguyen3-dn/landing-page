@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import FeatureItem from "../../modules/FeatureItem";
 
 const SectionFeature = ({ featureData }) => {
@@ -18,4 +18,4 @@ const SectionFeature = ({ featureData }) => {
   );
 };
 
-export default SectionFeature;
+export default memo(SectionFeature);

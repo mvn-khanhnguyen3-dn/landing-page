@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GoLocation } from "react-icons/go";
 import { BsChevronDown } from "react-icons/bs";
 import FormList from "../../modules/FormList";
@@ -31,7 +31,7 @@ const SectionHero = () => {
   return (
     <section className="section-hero">
       <div className="container flex align-items-center justify-content-between pX-12">
-        <div className="heroLeft">
+        <div className="heroLeft col-6">
           <h1 className="heroLeft-title">
             Buy and sell anything
             <span className="line">you want</span>

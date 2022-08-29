@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import DropDownCategory from "../../modules/DropDownCategory";
@@ -27,7 +27,25 @@ const Header = () => {
   const [isshowMenu, setIsShowMenu] = useState(false);
   const [isshowSocials, setIsShowSocials] = useState(false);
   const [isshowLanguage, setIsShowLanguage] = useState(false);
+  const [width, setWidth] = useState(0);
 
+  const handleShowMenu = () => {
+    setIsShowMenu(!isshowMenu);
+    const btnShow = document.querySelector(".btn-bar");
+    !isshowMenu
+      ? btnShow.classList.add("active")
+      : btnShow.classList.remove("active");
+  };
+
+  useEffect(() => {
+    const getWidth = () => {
+      setWidth(window.screen.availWidth);
+    };
+    window.addEventListener("resize", getWidth);
+    return () => {
+      window.removeEventListener("resize", getWidth);
+    };
+  }, [width]);
   return (
     <header className="page-header">
       <div className="container flex align-items-center justify-content-between">
@@ -44,7 +62,7 @@ const Header = () => {
             onClick={() => setIsShowCategory(!isshowCategory)}
             style={{
               background: isshowCategory ? "#f76631" : "#fff",
-              color: isshowCategory ? "#fff" : "",
+              color: isshowCategory ? "#fff" : "#344054",
             }}
           >
             <VscThreeBars className="icon-category" />
@@ -74,10 +92,7 @@ const Header = () => {
             onClick={() => setIsShowSocials(!isshowSocials)}
             className="icon-show"
           />
-          <a
-            onClick={() => setIsShowMenu(!isshowMenu)}
-            className="btn-show-menu"
-          >
+          <a onClick={handleShowMenu} className="btn-show-menu">
             <span className="btn-bar"></span>
           </a>
         </div>
@@ -85,7 +100,7 @@ const Header = () => {
           style={{
             maxHeight: isshowMenu ? "100vh" : "0",
             opacity: isshowMenu && "1",
-            visibility: !isshowMenu ? "visible" : "",
+            paddingTop: width < 580 && isshowMenu ? "3.2rem" : "0",
           }}
           className="header-nav-list flex "
         >
@@ -113,7 +128,6 @@ const Header = () => {
           style={{
             maxHeight: isshowSocials ? "100vh" : "0",
             opacity: isshowSocials && "1",
-            visibility: !isshowSocials ? "visible" : "",
           }}
           className="header-socials-list flex "
         >
@@ -121,8 +135,7 @@ const Header = () => {
             onClick={() => setIsShowChat(!isshowChat)}
             className="header-socials-item"
             style={{
-              background: isshowChat ? "#f54709" : "",
-              color: isshowChat ? "#fff" : "#fff",
+              background: isshowChat ? "#f54709" : "inherit",
             }}
           >
             <button className="btn btn-socials btn-chat bg-hover flex">
@@ -154,8 +167,7 @@ const Header = () => {
             onClick={() => setIsShowUser(!isshowUser)}
             className="header-socials-item"
             style={{
-              background: isshowUser ? "#f54709" : "",
-              color: isshowUser ? "#fff" : "",
+              background: isshowUser ? "#f54709" : "inherit",
               borderRadius: "50%",
             }}
           >

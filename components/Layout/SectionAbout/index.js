@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import React from "react";
 
 const SectionAbout = () => {
   return (
@@ -28,7 +27,7 @@ const SectionAbout = () => {
               src="/images/aboutShape1.png"
               width={230}
               height={360}
-              alt=""
+              alt="aboutShape1"
             />
           </div>
           <div className="about-image2">
@@ -36,7 +35,7 @@ const SectionAbout = () => {
               src="/images/aboutShape2.png"
               width={230}
               height={360}
-              alt=""
+              alt="aboutShape2"
             />
           </div>
         </div>

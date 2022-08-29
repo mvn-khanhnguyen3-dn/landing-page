@@ -5,9 +5,6 @@
             "@/components/*": [
                 "components/*"
             ],
-            "@/modules/*": [
-                "../../modules/*"
-            ]
         }
     }
 }

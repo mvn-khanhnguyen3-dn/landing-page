@@ -1,7 +1,7 @@
 .bg-hover {
   &:hover {
     background: map-get($colors, bg-primary) !important;
-    color: map-get($colors, white);
+    color: map-get($colors, white) !important;
     transition: 0.1s ease-in-out;
   }
   &:hover .category-item,
@@ -91,6 +91,18 @@
   @include pxRem(margin-top, 6);
   background-color: #f6f6f6;
   font-weight: 700;
+}
+
+.btn-bar.active {
+  background: none !important;
+  &::after {
+    top: 0 !important;
+    transform: rotate(45deg);
+  }
+  &::before {
+    top: 0 !important;
+    transform: rotate(-45deg);
+  }
 }
 
 .lazy-scroll,

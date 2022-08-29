@@ -38,21 +38,26 @@ const Admin = ({ dashboardData }) => {
   };
 
   return (
-    <section className="page-admin">
-      <div className="container">
-        <div className="flex form-container">
-          <Form
-            onSubmitProps={handleSubmit}
-            onImageChange={onImageChange}
-            image={image}
-            data={data}
-          />
+    <>
+      <Head>
+        <title>Dashboard</title>
+      </Head>
+      <section className="page-admin">
+        <div className="container">
+          <div className="flex form-container">
+            <Form
+              onSubmitProps={handleSubmit}
+              onImageChange={onImageChange}
+              image={image}
+              data={data}
+            />
+          </div>
+          <div className="section-admin-products">
+            <SectionFeature featureData={dashboardData} />
+          </div>
         </div>
-        <div className="section-admin-products">
-          <SectionFeature featureData={dashboardData} />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

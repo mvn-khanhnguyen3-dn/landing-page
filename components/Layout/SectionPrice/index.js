@@ -1,4 +1,3 @@
-import React from "react";
 import PriceItem from "../../modules/PriceItem";
 import { priceData } from "../../../utils/data";
 
