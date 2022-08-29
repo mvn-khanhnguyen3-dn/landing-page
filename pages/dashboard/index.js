@@ -3,6 +3,7 @@ import SectionFeature from "@/components/Layout/SectionFeature";
 import Form from "@/components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
 import { apiUrl } from "../../config";
+import Head from "next/head";
 
 export async function getServerSideProps() {
   const res = await fetch(`${apiUrl}/products`);
