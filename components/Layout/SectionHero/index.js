@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useEffect, useRef, useState, memo } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GoLocation } from "react-icons/go";
 import { BsChevronDown } from "react-icons/bs";
 import FormList from "../../modules/FormList";
@@ -89,4 +89,4 @@ const SectionHero = () => {
   );
 };
 
-export default memo(SectionHero);
+export default SectionHero;

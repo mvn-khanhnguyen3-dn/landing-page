@@ -12,7 +12,6 @@ export default function Document() {
           name="keywords"
           content="ads, advertise, advertising, classified, classified ads, database, directory, jobs, listing, local, portal"
         />
-        <meta property="og:image" content="/images/2.png" />
       </Head>
       <body>
         <Main />
