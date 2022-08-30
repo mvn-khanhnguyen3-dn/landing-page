@@ -9,7 +9,7 @@
   .header-category-list {
     position: relative;
     cursor: pointer;
-    @include pxRem(margin-right, -13);
+    @include pxRem(margin-right, -16);
     line-height: 1.2;
     color: #344054;
     z-index: 9999;
@@ -52,8 +52,11 @@
     }
     .header-nav-page {
       position: relative;
-      gap: 0.3rem;
       align-items: inherit;
+      .nav-icon {
+        @include pxRem(padding-left, 4);
+        font-size: convertPxToRem(20px);
+      }
       &:hover .is-hidden {
         display: block;
         transition: 0.5s ease-in-out;
@@ -78,7 +81,10 @@
     .btn-chat {
       border-radius: inherit;
       gap: 0.3rem;
-      @include pxRem(padding, 22 15);
+      @include pxRem(padding, 22 18);
+      .chat-name {
+        font-size: convertPxToRem(16px);
+      }
       .btn-chat-icon {
         font-size: convertPxToRem(22px);
       }
@@ -88,7 +94,7 @@
       width: convertPxToRem(48px);
       height: convertPxToRem(48px);
       line-height: convertPxToRem(48px);
-      font-size: convertPxToRem(20px);
+      font-size: convertPxToRem(18px);
       padding: 0;
     }
     .btn-plus {
@@ -130,6 +136,10 @@
     color: map-get($colors, white);
     font-weight: 300;
     cursor: pointer;
+    .change-language-item {
+      align-items: center;
+      gap: 0.2rem;
+    }
   }
   .btn-toggle-wrapper {
     position: absolute;

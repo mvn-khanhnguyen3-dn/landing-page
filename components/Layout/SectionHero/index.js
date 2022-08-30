@@ -68,7 +68,9 @@ const SectionHero = () => {
               height={523}
               objectPosition="center"
               alt="heroRight-image"
-              quality={100}
+              loading="eager"
+              unoptimized={true}
+              priority={true}
             />
           </div>
           <div className="heroRight-sub-image position-relative">
@@ -80,7 +82,8 @@ const SectionHero = () => {
               alt="heartbeat"
               width={126}
               height={126}
-              quality={100}
+              loading="eager"
+              unoptimized={true}
             />
           </div>
         </div>

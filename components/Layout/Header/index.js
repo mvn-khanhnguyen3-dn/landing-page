@@ -12,11 +12,11 @@ import {
   languageData,
 } from "../../../utils/data";
 import { VscThreeBars } from "react-icons/vsc";
-import { BsChevronDown, BsHeart } from "react-icons/bs";
+import { BsChevronDown, BsHeart, BsCaretDown } from "react-icons/bs";
 import { SiRocketdotchat } from "react-icons/si";
 import { RiUserLine } from "react-icons/ri";
 import { FaEllipsisV } from "react-icons/fa";
-import { AiOutlinePlusSquare, AiFillCaretDown } from "react-icons/ai";
+import { AiOutlinePlusSquare } from "react-icons/ai";
 import DropDownPage from "../../modules/DropDownPage";
 import FormList from "../../modules/FormList";
 
@@ -112,7 +112,7 @@ const Header = () => {
           </Link>
           <Link href="/pages">
             <a className="header-nav-page header-nav-item cls-hover hidden-cursor flex">
-              Pages <BsChevronDown />
+              Pages <BsChevronDown className="nav-icon" />
               <ul className="drop-down-list w-fit-sm is-hidden border-none pages-mobile">
                 {pageData?.map((item) => (
                   <DropDownPage key={item.id} {...item} />
@@ -194,9 +194,12 @@ const Header = () => {
             </button>
           </li>
           <li className="header-socials-item change-language position-relative">
-            <span onClick={() => setIsShowLanguage(!isshowLanguage)}>
+            <span
+              className="change-language-item flex"
+              onClick={() => setIsShowLanguage(!isshowLanguage)}
+            >
               English
-              <AiFillCaretDown className="btn-change-language" />
+              <BsCaretDown className="btn-change-language" />
             </span>
             <FormList
               className="show-language"

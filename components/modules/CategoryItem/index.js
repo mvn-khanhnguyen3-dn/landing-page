@@ -5,13 +5,13 @@ const CategoryItem = (props) => {
 
   return (
     <li className="category-item lazy-scroll">
-      <div className="category-item-image">
+      <div className="category-item-image position-relative">
         <Image
           src={image}
           layout="fill"
           objectFit="cover"
           alt={title}
-          quality={100}
+          unoptimized={true}
         />
       </div>
       <div className="category-item-content">
