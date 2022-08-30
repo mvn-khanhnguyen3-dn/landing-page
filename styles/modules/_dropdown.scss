@@ -25,6 +25,7 @@
   .drop-down_item {
     font-family: $font-body;
     font-weight: 400;
+    align-items: center;
     font-size: convertPxToRem(15px);
     @include pxRem(padding, 10 15);
     color: map-get($colors, cls-item);

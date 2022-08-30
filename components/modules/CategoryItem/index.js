@@ -12,6 +12,7 @@ const CategoryItem = (props) => {
           objectFit="cover"
           alt={title}
           unoptimized={true}
+          loading="lazy"
         />
       </div>
       <div className="category-item-content">
