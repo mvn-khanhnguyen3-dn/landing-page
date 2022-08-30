@@ -3,6 +3,7 @@ import Form from "@/components/modules/Form";
 import { fetchData } from "../../helper/fetchData";
 import { useRouter } from "next/router";
 import { apiUrl } from "../../config";
+import Head from "next/head";
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(`${apiUrl}/products/${params.id}`);
@@ -33,19 +34,24 @@ const Admin = ({ data }) => {
   };
 
   return (
-    <section className="page-admin">
-      <div className="container">
-        <div className="flex form-container">
-          <Form
-            onSubmitProps={handleSubmit}
-            onImageChange={onImageChange}
-            image={image}
-            data={data}
-            id={id}
-          />
+    <>
+      <Head>
+        <title>Details</title>
+      </Head>
+      <section className="page-admin">
+        <div className="container">
+          <div className="flex form-container">
+            <Form
+              onSubmitProps={handleSubmit}
+              onImageChange={onImageChange}
+              image={image}
+              data={data}
+              id={id}
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
