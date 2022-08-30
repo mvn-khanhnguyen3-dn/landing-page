@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DropDownCategory from "../../modules/DropDownCategory";
-import DropDownChat from "../../modules/DropDownChat";
-import DropDownUser from "../../modules/DropDownUser";
+import DropDownCategory from "@/modules/DropDownCategory";
+import DropDownChat from "@/modules/DropDownChat";
+import DropDownUser from "@/modules/DropDownUser";
 import {
   data,
   mesengeData,
@@ -17,8 +17,8 @@ import { SiRocketdotchat } from "react-icons/si";
 import { RiUserLine } from "react-icons/ri";
 import { FaEllipsisV } from "react-icons/fa";
 import { AiOutlinePlusSquare } from "react-icons/ai";
-import DropDownPage from "../../modules/DropDownPage";
-import FormList from "../../modules/FormList";
+import DropDownPage from "@/modules/DropDownPage";
+import FormList from "@/modules/FormList";
 
 const Header = () => {
   const [isshowCategory, setIsShowCategory] = useState(false);

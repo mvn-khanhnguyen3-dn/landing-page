@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { categoryData } from "../../../utils/data";
-import CategoryItem from "../../modules/CategoryItem";
-import { useHookScroll } from "../../../hook/useScroll";
+import { categoryData } from "@/utils/data";
+import CategoryItem from "@/modules/CategoryItem";
+import { useHookScroll } from "@/hooks/useScroll";
 
 const SectionCategory = () => {
   useEffect(() => {

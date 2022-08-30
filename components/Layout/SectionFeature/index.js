@@ -1,5 +1,5 @@
 import { memo } from "react";
-import FeatureItem from "../../modules/FeatureItem";
+import FeatureItem from "@/modules/FeatureItem";
 
 const SectionFeature = ({ featureData }) => {
   return (

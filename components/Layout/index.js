@@ -1,5 +1,5 @@
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { useEffect, useRef } from "react";
 

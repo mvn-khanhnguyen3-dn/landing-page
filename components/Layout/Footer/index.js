@@ -5,9 +5,9 @@ import { FiMapPin } from "react-icons/fi";
 import { AiFillYoutube } from "react-icons/ai";
 import { BsTelephone, BsFacebook } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
-import { footerData } from "../../../utils/data";
-import FooterColItem from "../../modules/FooterColItem";
-import { useHookScroll } from "../../../hook/useScroll";
+import { footerData } from "@/utils/data";
+import FooterColItem from "@/modules/FooterColItem";
+import { useHookScroll } from "@/hooks/useScroll";
 
 const Footer = () => {
   let footerRef = useRef();

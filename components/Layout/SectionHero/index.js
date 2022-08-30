@@ -2,8 +2,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState, memo } from "react";
 import { GoLocation } from "react-icons/go";
 import { BsChevronDown } from "react-icons/bs";
-import FormList from "../../modules/FormList";
-import { formData } from "../../../utils/data";
+import FormList from "@/modules/FormList";
+import { formData } from "@/utils/data";
 
 const SectionHero = () => {
   const [isShow, setIsShow] = useState(false);

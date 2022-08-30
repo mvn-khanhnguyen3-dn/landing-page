@@ -1,5 +1,5 @@
-import PriceItem from "../../modules/PriceItem";
-import { priceData } from "../../../utils/data";
+import PriceItem from "@/modules/PriceItem";
+import { priceData } from "@/utils/data";
 
 const SectionPrice = () => {
   return (
