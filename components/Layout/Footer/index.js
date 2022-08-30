@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 import { FiMapPin } from "react-icons/fi";
 import { AiFillYoutube } from "react-icons/ai";
 import { BsTelephone, BsFacebook } from "react-icons/bs";
@@ -111,4 +111,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

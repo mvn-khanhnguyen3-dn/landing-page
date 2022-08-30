@@ -46,7 +46,7 @@ const FeatureItem = (props) => {
             layout="fill"
             alt={title}
             objectFit="cover"
-            quality={100}
+            unoptimized={true}
           />
         </div>
         <div className="feature-item-content">
