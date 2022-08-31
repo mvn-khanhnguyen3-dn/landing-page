@@ -52,7 +52,12 @@ const Header = () => {
         <div className="header-logo logo position-relative">
           <Link href="/">
             <a>
-              <Image src="/images/2.png" alt="logo" layout="fill" />
+              <Image
+                src="/images/2.png"
+                alt="logo"
+                layout="fill"
+                loading="eager"
+              />
             </a>
           </Link>
         </div>
