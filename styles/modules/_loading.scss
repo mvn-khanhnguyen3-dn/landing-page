@@ -6,6 +6,7 @@
     filter: blur(5px);
     letter-spacing: 3px;
   }
+
   100% {
     opacity: 1;
     font-size: 12px;
@@ -24,6 +25,7 @@
   animation-direction: alternate;
   text-shadow: 0 0 1px white;
 }
+
 .section-loading {
   height: 96vh;
   background-color: #111;

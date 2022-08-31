@@ -1,22 +1,28 @@
 .page-admin {
   @include pxRem(padding, 150 0);
   background: map-get($colors, bg-section-hero);
+
   .container {
     .form-container {
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
     .section-admin-products {
       @include pxRem(padding-top, 100);
+
       .container {
         @include pxRem(padding, 0);
+
         .title {
           color: map-get($colors, white);
         }
+
         .section-feature-list {
           justify-content: flex-start;
         }
       }
+
       .feature-item {
         width: calc(100% / 4 - 1.15rem);
         position: relative;
@@ -24,6 +30,7 @@
         .feature-item-title {
           cursor: pointer;
         }
+
         .feature-delete-icon {
           display: block;
           position: absolute;
@@ -36,6 +43,7 @@
     }
   }
 }
+
 @include respond-below(large) {
   .page-admin {
     .feature-item {
@@ -43,14 +51,17 @@
     }
   }
 }
+
 @include respond-below(medium) {
   .product-cart,
   .form-admin {
     width: 100%;
   }
+
   .form-container {
     gap: 2rem;
   }
+
   .page-admin {
     @include pxRem(padding, 100 40);
   }

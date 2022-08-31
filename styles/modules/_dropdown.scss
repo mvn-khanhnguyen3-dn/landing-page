@@ -22,6 +22,7 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgb(221 221 221 / 20%);
+
   .drop-down_item {
     font-family: $font-body;
     font-weight: 400;
@@ -30,46 +31,60 @@
     @include pxRem(padding, 10 15);
     color: map-get($colors, cls-item);
     border-bottom: 1px solid #eee;
+
     &:last-child {
       border-bottom: none;
     }
+
     cursor: pointer;
+
     .drop-desc-icon {
       margin-left: auto;
     }
   }
+
   .drop-down-category {
     @include pxRem(padding, 18 17);
   }
+
   .drop-down-content {
     flex-direction: column;
     align-items: flex-start;
+
     .drop-down-username {
       font-size: convertPxToRem(15px);
     }
+
     .drop-down-times {
       font-size: convertPxToRem(14px);
     }
   }
 }
+
 .w-fit {
   width: convertPxToRem(250px);
 }
+
 .w-fit-sm {
   width: convertPxToRem(220px);
 }
+
 .fz-md {
   font-size: convertPxToRem(16px) !important;
 }
+
 .drop-scroll {
   position: static;
+
   .drop-down_item {
     @include pxRem(padding, 5 9 7);
   }
 }
+
 .drop-static {
   position: static;
   @include pxRem(border-radius, 0 0 8 8);
+
   .drop-down_item {
     &:last-child {
       @include pxRem(border-radius, 0 8);
@@ -82,8 +97,10 @@
   @include pxRem(border-radius, 0);
   border: none;
 }
+
 .drop-item {
   position: relative;
+
   &:hover .menuWrapper {
     visibility: visible;
     opacity: 1;
@@ -110,10 +127,12 @@
   padding: convertPxToRem(30px);
   min-width: convertPxToRem(768px);
   max-height: convertPxToRem(380px);
+
   .list {
     color: map-get($colors, cls-item);
   }
 }
+
 .drop-down-page {
   @include pxRem(padding, 10 30);
   line-height: convertPxToRem(23px);
@@ -124,6 +143,7 @@
   color: map-get($colors, cls-item);
   border-bottom: 1px solid #eee;
   cursor: pointer;
+
   &:last-child {
     border-bottom: 4px solid map-get($colors, bg-primary);
   }

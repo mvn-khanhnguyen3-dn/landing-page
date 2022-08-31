@@ -2,13 +2,16 @@
   width: calc(100% / 4 - 1.2rem);
   height: 100%;
 }
+
 .feature-item-image {
   img {
     border-radius: convertPxToRem(20px);
   }
+
   width: 100%;
   min-height: convertPxToRem(250px);
 }
+
 .feature-item-content {
   background: #fff;
   @include pxRem(padding, 18 31 25 25);
@@ -17,12 +20,14 @@
   box-shadow: 0 3px 12px rgb(45 23 191 / 9%);
   position: relative;
 }
+
 .feature-item-title {
   line-height: 1.5;
   font-weight: 500;
   font-size: convertPxToRem(22px);
   color: map-get($colors, primary);
 }
+
 .feature-item-cap {
   margin: convertPxToRem(2px) 0;
   font-size: convertPxToRem(15px);
@@ -31,11 +36,13 @@
   font-family: $font-menu;
 
   color: map-get($colors, cls-form);
+
   .subCap {
     color: map-get($colors, cls-subcap);
     font-weight: 300;
   }
 }
+
 .feature-item-price {
   margin-bottom: convertPxToRem(18px);
   font-weight: 400;
@@ -43,8 +50,10 @@
   font-family: $font-menu;
   display: block;
 }
+
 .btn-wrapper {
   font-family: $font-menu;
+
   .pro-btn {
     border: 1px solid transparent;
     text-transform: uppercase;
@@ -55,18 +64,22 @@
     border-radius: convertPxToRem(6px);
     transition: 0.4s all ease-in-out;
   }
+
   .pro-btn1 {
     color: map-get($colors, bg-primary);
     background: rgba(252, 79, 79, 0.1);
     @include pxRem(margin-right, 7);
+
     &:hover {
       background: map-get($colors, bg-primary);
       color: map-get($colors, white);
     }
   }
+
   .pro-btn2 {
     background: rgba(82, 78, 183, 0.1);
     color: map-get($colors, cls-subcap);
+
     &:hover {
       background: map-get($colors, cls-subcap);
       color: map-get($colors, white);

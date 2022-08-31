@@ -33,19 +33,13 @@
   background: map-get($colors, bg-primary);
   transition: all 0.2s;
 }
+
 .page-footer:hover ~ .cursor {
   transform: scale(2.2);
   opacity: 0.1;
   background: map-get($colors, bg-primary);
   transition: all 0.2s;
 }
-
-// :hover .cursorOuter {
-//   transform: scale(2.2) !important;
-//   opacity: 0.1;
-//   background: map-get($colors, bg-primary);
-//   transition: all 0.3s;
-// }
 
 .menuWrapper::-webkit-scrollbar,
 .pages-mobile::-webkit-scrollbar {
@@ -79,6 +73,7 @@
   text-align: center;
   transform: translateY(15px);
   transition: all 200ms linear;
+
   .progress-icon {
     color: map-get($colors, bg-primary);
     background: map-get($colors, white);
@@ -102,6 +97,7 @@
   position: absolute;
   right: 0;
   top: 2.5rem;
+
   .form-list {
     .form-item {
       font-size: 13px;

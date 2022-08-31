@@ -4,6 +4,7 @@
   font-family: "Arvo", serif;
   display: flex;
   justify-content: center;
+
   .container,
   .col-sm-12 {
     width: 100%;
@@ -36,6 +37,7 @@
   @include pxRem(margin, 20 0);
   display: inline-block;
 }
+
 .contant_box_404 {
   @include pxRem(margin-top, -50);
 }

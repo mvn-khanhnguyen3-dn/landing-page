@@ -10,6 +10,7 @@
   right: 0;
   z-index: 2;
   border-radius: 10px;
+
   .delete-icon {
     position: absolute;
     right: 0;
@@ -17,9 +18,11 @@
     @include pxRem(font-size, 22);
     cursor: pointer;
   }
+
   .modal-title {
     @include pxRem(font-size, 13);
   }
+
   .btn-group {
     gap: 0.8rem;
     justify-content: flex-end;
@@ -31,6 +34,7 @@
       @include pxRem(padding, 6 8);
       height: 20px;
     }
+
     .btn-delete {
       background: map-get($colors, bg-delete);
       color: map-get($colors, white);

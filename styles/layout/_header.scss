@@ -3,9 +3,11 @@
   background: map-get($colors, black);
   color: map-get($colors, white);
   text-transform: capitalize;
+
   .header-logo {
     cursor: pointer;
   }
+
   .header-category-list {
     position: relative;
     cursor: pointer;
@@ -17,6 +19,7 @@
     box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
     border-radius: convertPxToRem(8px);
     font-size: convertPxToRem(16px);
+
     .btn-allCategory {
       align-items: center;
       @include pxRem(padding-left, 24);
@@ -24,10 +27,12 @@
       line-height: convertPxToRem(50px);
       font-family: $font-menu;
       border-radius: inherit;
+
       .icon-category {
         font-size: convertPxToRem(20px);
       }
     }
+
     .category-item {
       @include pxRem(padding-left, 16);
       @include pxRem(padding-right, 24);
@@ -36,59 +41,72 @@
       font-size: convertPxToRem(16px);
     }
   }
+
   .header-nav-list {
     font-size: convertPxToRem(16px);
     line-height: convertPxToRem(70px);
     align-items: center;
+
     .header-nav-item {
       color: map-get($colors, white);
       @include pxRem(padding, 0 22);
       font-weight: 300;
       line-height: inherit;
       color: #fff;
+
       &:first-child {
         padding-left: 0;
       }
     }
+
     .header-nav-page {
       position: relative;
       align-items: inherit;
+
       .nav-icon {
         @include pxRem(padding-left, 4);
         font-size: convertPxToRem(20px);
       }
+
       &:hover .is-hidden {
         display: block;
         transition: 0.5s ease-in-out;
       }
     }
   }
+
   .header-socials-list {
     align-items: center;
     gap: convertPxToRem(20px);
   }
+
   .header-socials-item {
     position: relative;
     padding-top: convertPxToRem(1px);
     margin-bottom: convertPxToRem(9px);
     border-radius: convertPxToRem(30px);
+
     .btn-socials {
       color: #fff;
       background: rgba(255, 255, 255, 0.3);
       font-family: $font-menu;
       border-radius: inherit;
     }
+
     .btn-chat {
       border-radius: inherit;
       gap: 0.3rem;
       @include pxRem(padding, 22 18);
+
       .chat-name {
         font-size: convertPxToRem(16px);
       }
+
       .btn-chat-icon {
         font-size: convertPxToRem(22px);
       }
     }
+
     .btn-user,
     .btn-heart {
       width: convertPxToRem(48px);
@@ -97,22 +115,26 @@
       font-size: convertPxToRem(18px);
       padding: 0;
     }
+
     .btn-plus {
       background: map-get($colors, bg-primary);
       border-radius: convertPxToRem(8px);
       height: convertPxToRem(37px);
       @include pxRem(padding, 0 8);
       border: 1px solid transparent;
+
       &:hover {
         background: 0;
         border: 1px solid map-get($colors, bg-primary);
         color: map-get($colors, bg-primary);
         transition: 0.4s ease-in-out;
       }
+
       .btn-icon-plus {
         font-size: convertPxToRem(25px);
       }
     }
+
     .drop-down-title {
       font-family: $font-body;
       font-size: convertPxToRem(17px);
@@ -123,6 +145,7 @@
       font-weight: 600;
       background: #fff;
     }
+
     .chat-all {
       font-family: $font-body;
       font-size: convertPxToRem(15px);
@@ -132,23 +155,28 @@
       @include pxRem(padding, 20 15);
     }
   }
+
   .change-language {
     color: map-get($colors, white);
     font-weight: 300;
     cursor: pointer;
+
     .change-language-item {
       align-items: center;
       gap: 0.2rem;
     }
   }
+
   .btn-toggle-wrapper {
     position: absolute;
     right: 1rem;
+
     .icon-show {
       color: map-get($colors, white);
       font-size: convertPxToRem(20px);
       @include pxRem(margin-right, 20);
     }
+
     .btn-show-menu {
       border: 1px solid #f4f4f4;
       padding: 6px;
@@ -159,6 +187,7 @@
       border-radius: 0.25rem;
       transition: box-shadow 0.15s ease-in-out;
     }
+
     .btn-bar {
       width: 25px;
       height: 2px;
@@ -166,6 +195,7 @@
       position: relative;
       display: inline-block;
       vertical-align: middle;
+
       &::after,
       &::before {
         position: absolute;
@@ -176,9 +206,11 @@
         left: 0;
         transition: all 0.4s;
       }
+
       &::before {
         top: -7px;
       }
+
       &::after {
         top: auto;
         bottom: -7px;
