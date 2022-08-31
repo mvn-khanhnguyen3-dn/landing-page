@@ -139,10 +139,10 @@
       font-family: $font-body;
       font-size: convertPxToRem(17px);
       border-bottom: 1px solid rgba(221, 221, 221, 0.3);
-      @include pxRem(padding, 20 15 10);
+      @include pxRem(padding, 18 15 10);
       color: map-get($colors, cls-black);
       @include pxRem(border-radius, 8 8 0 0);
-      font-weight: 600;
+      font-weight: 500;
       background: #fff;
     }
 
@@ -152,7 +152,7 @@
       color: map-get($colors, primary);
       font-weight: 400;
       @include pxRem(border-radius, 0 0 8 8);
-      @include pxRem(padding, 20 15);
+      @include pxRem(padding, 17 15);
     }
   }
 

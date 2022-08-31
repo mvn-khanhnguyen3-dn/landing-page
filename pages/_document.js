@@ -29,7 +29,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script id="show-cursor" strategy="lazyOnload">
+        <Script id="show-cursor" strategy="afterInteractive">
           {`
           const cursor = document.querySelector('.cursor');          
           const cursor2 = document.querySelector('.cursor2');          
