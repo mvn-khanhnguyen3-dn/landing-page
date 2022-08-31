@@ -32,8 +32,8 @@ export default function Document() {
         <Script id="show-cursor" strategy="afterInteractive">
           {`
           const cursor = document.querySelector('.cursor');          
-          const cursor2 = document.querySelector('.cursor2');          
-          document.onmousemove = (e) =>{
+          const cursor2 = document.querySelector('.cursor2'); 
+          const mouseEvent = (e) => {
             cursor.style.left = (e.pageX - 5) + 'px';
             cursor.style.top = (e.pageY - 6) + 'px';
             cursor.style.display = 'block'
@@ -41,6 +41,7 @@ export default function Document() {
             cursor2.style.top = (e.pageY - 6) + 'px';
             cursor2.style.display = 'block'
           }
+          window.addEventListener("mousemove",mouseEvent)
           `}
         </Script>
       </body>
